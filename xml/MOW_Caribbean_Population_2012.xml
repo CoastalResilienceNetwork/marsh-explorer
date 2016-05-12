@@ -1,0 +1,88 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>MOW_Caribbean_Population_2012</title>
+        <geoform>remote-sensing image</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Using an innovative approach with Geographic Information System and Remote Sensing, ORNL's LandScanTM is the community standard for global population distribution. At approximately 1 km resolution (30" X 30"), LandScan is the finest resolution global population distribution data available and represents an ambient population (average over 24 hours). The LandScan algorithm, an R&amp;D 100 Award Winner, uses spatial data and imagery analysis technologies and a multi-variable dasymetric modeling approach to disaggregate census counts within an administrative boundary. Since no single population distribution model can account for the differences in spatial data availability, quality, scale, and accuracy as well as the differences in cultural settlement practices, LandScan population distribution models are tailored to match the data conditions and geographical nature of each individual country and region. The values of the cells are integer population counts representing an average, or ambient, population distribution.</abstract>
+      <purpose>This layer displays population distribution across the United States.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-89.624410</westbc>
+        <eastbc>-57.996595</eastbc>
+        <northbc>28.286882</northbc>
+        <southbc>7.365998</southbc>
+      </bounding>
+    </spdom>
+    <accconst>None</accconst>
+    <useconst>This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 License (http://creativecommons.org/licenses/by-nc-sa/3.0/). By using this information, you agree to these terms.</useconst>
+    <datacred>LandScan is funded by the Department of Defense. Annual sub-national population estimates are provided by the Geographic Studies Branch, Population Division, U.S. Bureau of the Census. Much of the spatial data and imagery processed in the LandScan model is provided by the National Geospatial-Intelligence Agency. In addition, the producers of the LandScan dataset would like to acknowledge the contribution of selected administrative boundaries provided by The Global Administrative Unit Layers (GAUL) dataset, implemented by FAO within the EC FAO Food Security for Action Programme. http://www.ornl.gov/sci/landscan/landscan_documentation.shtml</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.1.3143</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Pixel</rasttype>
+      <rowcount>2447</rowcount>
+      <colcount>3498</colcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>VAT_MOW_Caribbean_Population_2012</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Value</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Count</attrlabl>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20150617</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

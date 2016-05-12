@@ -1,0 +1,130 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Coral Reef - Modeled exposure to the coast</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>These data represents the modeled output of coastal exposure as an index and the affect coral reef areas have on reducing that exposure. The index was created using the InVEST Coastal Vulnerability model that produces a qualitative estimate of relatively high or low exposure to erosion and inundation during storms. By coupling these results with global population information, the model can show areas along a given coastline where humans are most vulnerable to storm waves and surge. Once vulnerable portions of the coastline have been identified (using a threshold derived from vulnerability), the Coastal Protection Model(s) is used to evaluate the protective benefit of natural coastal protection assets. For the geomorphology file we used the following shoreline habitats and rankings: Beaches (5), Mangroves (4), Unclassified (3), Rocky Shores (2). These shoreline types were mapped using heads-up digitization of high resolution image databases (Google Earth and Microsoft Bing). The following protective distances were applied to the natural habitats: Coral Reef (3000m), Mangrove (3,500m), Seagrass (500m), Beach (0m). The coral reef habitat came from the global Millennial Coral Reef maps mapped using Landsat 7 imagery, the seagrass from a compilation of UNEP/WCMC data and Landsat-derived products, and the mangroves and beach data was digitized from high resolution image databases (Google Earth and Microsoft Bing). The global GEBCO database was used for bathymetry (1km), SRTM v3 (30m) for the elevation, and the coastline was represented using the NGA 100k shoreline product from the 2000 global Landsat orthomosaic. The wave exposure data (wind and wave) came from the WaveWatch III database and Landscan 2012 (1km) was used for the population data. Outputs can be used to better understand the relative contributions of these different model variables to coastal exposure and highlight the protective services offered by natural habitats to coastal populations. This information can help coastal managers, planners, landowners and other stakeholders identify regions of greater risk to coastal hazards, which can in turn better inform development strategies and permitting. As the results provide a qualitative representation of erosion and inundation risks rather than quantifying shoreline retreat or inundation limits.</abstract>
+      <purpose>These data layers were created by The Nature Conservancy’s Caribbean Program and the University of California-Santz Cruz’s Center for Integrated Spatial Research for the Mapping Ocean Wealth project in October 2015. The goal of this project is to use science, communications, and policy work to visualize and quantify the ocean’s ecosystem, so that we can make smarter investments and decisions for the ocean of tomorrow. In the Caribbean, we used the InVEST tool to model ecosystem services for coral reefs, mangroves, and seagrass beds to visualize how these coastal habitats provide benefits in terms of coastal protection and recreation/tourism. Find out more at http://oceanwealth.org</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-84.963594</westbc>
+        <eastbc>-59.418569</eastbc>
+        <northbc>27.271195</northbc>
+        <southbc>11.135039</southbc>
+      </bounding>
+    </spdom>
+    <accconst>None</accconst>
+    <useconst>GIS Data User AgreementAny Geographic Information System (GIS) data or information received from The Nature Conservancy (TNC) or downloaded from a TNC site (collectively “GIS Data”) is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 License (http://creativecommons.org/licenses/by-nc-sa/3.0/). More specific limitations of this data are stated below. By using this information, you acknowledge that you have read, understood, and accepted the terms and conditions stated in this GIS Data User Agreement. TNC reserves the right to change this Agreement at any time and without notice. Your use of this information shall constitute your agreement to be bound by this Agreement and any changes.The user hereby acknowledges that the GIS Data is subject to constant change and that its accuracy, including but not limited to, its accuracy as to labeling, dimensions, boundaries, placement or location of any map features therein, cannot be guaranteed. All GIS Data is provided as is, with potential faults, errors and without warranty of any kind, expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. Additionally, TNC does not warrant that the information contained in this GIS Data will meet the user's requirements or that the operation of the GIS Data will be uninterrupted or error free, or that data defects will be corrected. The entire risk as to the quality, performance and usefulness of the GIS Data rests with the user.The user, in using this GIS Data, hereby releases TNC, their agents, consultants, contractors or employees from any and all claims, actions, or causes of action for damages including, but not limited to, any costs of recovering, reprogramming or reproducing any programs or data stored in or used with the GIS Data, damage to property, damages for personal injury or for any lost profits, lost savings, or other special, incidental or consequential damages arising out of the use of or inability to use the GIS Data, even if such parties have been advised of the possibility of such damage. User agrees to indemnify and hold harmless TNC, their agents, consultants, contractors and employees from any and all liability claims or damages to any person or property arising from or connected with the use of the GIS Data.Further Data RestrictionsUse of the GIS Data is limited to academic or scientific purposes and may not be used for profitable purposes or by a for-profit corporation. The user hereby commits to acknowledge The Nature Conservancy as the data source and compiler when GIS Data received from TNC (through formal delivery or from a website) is used in the preparation of reports, papers, publications, maps and any other products. Any use, display or incorporation of GIS Data shall include the date on which such information was provided.The user also agrees to provide TNC, at no cost to TNC, a digital copy of any Geo-Spatial Data, tabular data, reports, imagery, drawing(s), plan(s), and any other form of result that were derived directly or indirectly from the use of these data provided by TNC along with its associated metadata.To ensure that appropriate documentation and data limitations are provided, downloaded data should not be redistributed to third-party users or uploaded to a central server unless written permission is granted by the TNC’s Caribbean Program GIS data manager (caribgis@tnc.org) and Caribbean Program Director (Luis Solorzano: luis.solorzano@TNC.ORG).When such GIS Data is used the following disclaimer and waiver of liability shall be included and displayed prominently so as to alert any person viewing or utilizing this information:NOTICE: It is understood that, while The Nature Conservancy and its partners of information have no indication or reason to believe that there are inaccuracies or defects in information incorporated in the base map, The Nature Conservancy and its data partners make NO REPRESENTATIONS OF ANY KIND, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE, NOR ARE ANY SUCH WARRANTIES TO BE IMPLIED, WITH RESPECT TO THE INFORMATION OR DATA, FURNISHED HEREIN.</useconst>
+    <datacred>UCSC Center for Integrated Spatial Research and TNC; caribgis@tnc.org</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.1.3143</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>17671</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>MOW_Caribbean_CoralCoastalExposure</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>x</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>y</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>array_row</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>array_col</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>shore_expo</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>geomorphol</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>relief</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>natural_ha</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>surge_pote</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>coastal_ex</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>coastal__1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>habitat_ro</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>erodible_s</attrlabl>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20160314</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

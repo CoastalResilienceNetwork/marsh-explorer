@@ -1,0 +1,134 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Caribbean Coral Reefs</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The coral reef map displays data from multiple sources, providing the most accurate and current information for this region to date. The first step towards this final product began with mapping regional data which covered as many countries in the CLME region as possible. This included information from 3 separate datasets: (1.) For the insular Caribbean, the best available information was compiled by Brigham Young University students through a Nature Conservancy contract in 2011. This effort also began with a compilation of various datasets, supplemented with any original digitization efforts. This information was then checked against high resolution satellite imagery where available from Bing and Esri imagery basemaps. Errors and misrepresentations in the base information were modified through heads up digitization from the high resolution imagery. Omissions of coverage were corrected by creating new polygons to match visible coral structures. Outside of the insular Caribbean, (2.) the data from the Mesoamerican region was collected in 2007 as well as (3.) "Tropical Coral Reefs of the World," a 2011 dataset from the World's Resources Institute. For this dataset, reef locations were based on 500 meter resolution gridded data (converted to polygon) reflecting shallow, tropical coral reefs. Organizations contributing to this effort include the Institute for Marine Remote Sensing, University of South Florida (IMaRS/USF), Institut de Recherche pour le Développement (IRD), UNEP-WCMC, The World Fish Center and the World’s Resources Institute. The final composite dataset was compiled from multiple sources, incorporating products from the Millennium Coral Reef Mapping Project prepared by IMaRS/USF and IRD using imagery from 1999-2003.The regional data was then replaced with sub-regional, national or site level information where this information was available (and wasn't already used in the starting regional file) to obtain a finer scale product. For coral reefs, the following separate datasets were included: (1.) Grenada and St. Vincent and the Grenadines were replaced with data collected from the At the Water’s Edge Project led by the Nature Conservancy. Four coral reef datasets were used for these two countries: a.) The Millenium Coral Reef Mapping Project (MCRMP) through IMaRS at USF with Dr. Serge Andrefouet being the principle investigator who developed a reef classification applied that to derived reef morphology from 30m Landsat data from 1999-2003. b.) A project dataset shared by the Planning Department of St. Vincent and the Grenadines (SVG) which was developed for the SVG Coastal Resources Inventory System (CRIS) and data was digitized from Landsat 1999 by Alan Mills and others. c.) Kim Baldwin's work in 2009 through the Marine Resources Space-use Information System (MarSIS) resulted in a benthic habitat file which she created by heads up digitizing effort using IKONOS imagery.d). Brigham Young University students, under contract by the Nature Conservancy, digitized polygons for the country of Grenada using WorldView2 2010 orthophotos. Coral reefs for St. Vincent and the Grenadines were digitized from 2007 aerial photos. e.) The Grenville area of Grenada and Union Island of St. Vincent and the Grenadines was created through object-oriented mapping using Definiens eCognition software on WorldView2 imagery. (2.) St. Kitts and Nevis were replaced with data collected from satellite and in-situ field data by the National Coral Reef Institute (NCRI) on behalf of The Nature Conservancy. (3.) USVI and Puerto Rico were replaced with data collected from NOAA's benthic habitat mapping effort in 1999. Twenty-one distinct benthic habitat types within eight zones were mapped using visual interpretation of orthorectified aerial photographs. (4.) St. Lucia was replaced with data collected for the 2009 National Ecological GAP Assessment. Coral reef locations were collected from Mr. Allan Smith. Methods for creating the data are unknown. (5.) Jamaica was replaced with data collected from the 2009 National Ecological GAP Assessment. Conservation targets for this project were derived from a combination of ecological expert inputs, published literature, existing maps and other credible documentation. (6.) For Barbuda, IKONOS-2 satellite imagery collected by GeoEye (now DigitalGlobe) in 2012 is the basis for the layer. The product was created through object-oriented mapping using Definiens eCognition software. Barbuda also had polygons added to the island from data originally created by Barry Devine for Antigua and Barbuda Resource Mapping and Protected Areas Project in 2004 and placed into the Environmental Information Management Advisory System (EIMAS). These extra polygons represent the coral outcrops in the northwest lagoon area. (7.) Monserrat was not available in regional data. Polygons for this island were from data created in 1996 and collected for The Nature Conservany's Sustained Marine and Coastal Biodiversity Threat Abatement in the Eastern Caribbean project. (8.) The eastern coast of Andros Island in the Bahamas was replaced with data created by The Nature Conservancy through a contract with the National Coral Reef Institute for the Global Environmental Facility-funded Integrating Watershed and Coastal Area Management in Caribbean Small Island Developing States (GEF-IWCAM) Project.The habitat layer was derived from RapidEye multispectral satellite data (RapidEye 2010). (9.) Île à Vache, Haiti was replaced with data collected for the Haiti Southwest Sustainable Development Project in 2012. The project utilized well established image-based remote sensing techniques and used a more advanced high-resolution satellite sensor (Worldview-2) and object-based mapping techniques.</abstract>
+      <purpose>5 files were created for the Caribbean Large Marine Ecosystem (CLME) Project: Protected Areas, Mangroves, Seagrasses, Beaches, and Coral Reefs. The purpose of the CLME Project was to improve the management of the shared living marine resources -most of which are considered to be fully or partially exploited- among participating countries in the Wider Caribbean Region through an Ecosystem-Based Management (EBM) approach.
+
+</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-88.801694</westbc>
+        <eastbc>-32.394377</eastbc>
+        <northbc>27.351113</northbc>
+        <southbc>-10.368302</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Coral Reefs</themekey>
+        <themekey>Caribbean</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 License (http://creativecommons.org/licenses/by-nc-sa/3.0/). By using this information, you agree to these terms.</useconst>
+    <datacred>These files were created under a contract from UNESCO for the purposes of the CLME Project in 2013.</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.1.3143</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>161</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>MOW_Caribbean_CoralReef</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hab_Desc</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Hab_Desc2</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Source</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Data_Year</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Government</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Leng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20150617</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

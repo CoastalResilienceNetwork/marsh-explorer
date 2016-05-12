@@ -1,0 +1,142 @@
+{
+    "name": "Puget Sound Restoration Explorer",
+    "text": "To begin, select a region to view.",
+	"globalText": "",
+	"methods": "methods/Floodplain_Explorer_Methods.pdf",
+	"mainToggle": {"index": 0, "text": "Toggle Restoration Score on or off"},
+    "betweenGroups": "*",
+    "averageGroups": true,
+    "height": 510,
+	"width": 200,
+    "regions": [
+        {
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/Puget_Sound/Floodplain_Explorer/MapServer",
+			"items": [	
+				{
+					"text": "<b>Click For Floodplain Explorer Instructions</b>",
+					"type": "anchor"
+				},
+				{
+					"type": "textArea",
+					"text": "Acres (Minimum Area)"
+				},
+				{
+					"text": "<b>Selected Valley Bottom Segment</b>",
+					"type": "select"
+				},
+				{
+					"text": "<b>Current Ecological Function</b>",
+					"type": "text"
+				},
+				{ 
+					"group": "all", 
+					"index": "function1",  
+					"text": "Store and Route Floodwaters", 
+					"type": "layer",
+					"lyrnum": 1,
+					"query": "fn1_acres",
+					"hphoto": "plugins/floodplain_explorer/fnhelp5.jpg",
+					"help": "Floodplains store and convey streamflow during floods. Floodplains that store floodwater must be lower than flood stage and connected to a river without significant flood regulation. Floodplains that convey floodwater require these conditions, but also must be relatively free of structures that impede flowing water.",
+					"sub": "fn1Sub"
+				},
+				{
+					"group": "all", 
+					"index": "function2", 
+					"text": "Supply Sediment and Wood", 
+					"type": "layer",
+					"lyrnum": 2,
+					"query": "fn2_acres",
+					"help": "Floodplains have an important role in the supply of sediment and large woody debris to river networks through bank erosion and avulsions. Floodplains only act as a proximate source of sediment, storing material derived from headwater streams and hillslopes. Thus, floodplains supply sediment if they are composed of erodible material; a river can access that material during floods, has sufficient power to transport the material, and if there are upstream sources of sediment that can replenish floodplain stores of sediment. In addition to these conditions, floodplains supply wood to rivers only when they have mature forests. Channel banks with revetments protecting infrastructure and areas covered with impervious surfaces generally do not supply sediment or wood to channels.",
+					"sub": "fn2Sub"
+				},						
+				{
+					"group": "all", 
+					"index": "function3", 
+					"text": "Retain and Transform Water Pollutants", 
+					"type": "layer",
+					"lyrnum": 3,
+					"query": "fn3_acres",
+					"help": "Floodplains retain and transform water pollutants where floodwaters inundate floodplains and are stored for long periods of time.",
+					"sub": "fn3Sub"
+				}, 
+				{
+					"group": "all", 
+					"index": "function4",
+					"text": "Support Floodplain Forest Ecosystems", 
+					"type": "layer",
+					"lyrnum": 4,
+					"query": "fn4_acres",
+					"help": "Floodplains support productive and diverse forest ecosystems in areas where trees can grow to maturity (>100 years), rivers deposit sediment that can be colonized by early seral stage plants, and that are not fragmented by human development.",
+					"sub": "fn4Sub"
+				}, 
+				{ 
+					"group": "all", 
+					"index": "function5", 
+					"text": "Salmon Habitat", 
+					"type": "layer",
+					"lyrnum": 5,
+					"query": "fn5_acres",
+					"help": "Rivers provide habitats for salmon to migrate, spawn, and rear. Edges can be preferred habitats for juvenile rearing.",
+					"sub": "fn5Sub"
+				},
+				{
+					"text": "<b>Potential Ecological Function</b>",
+					"type": "text"
+				},
+				{
+					"group": "all", 
+					"index": "reconnect", 
+					"text": "Restore Connectivity", 
+					"type": "layer",
+					"lyrnum": 6,
+					"query": "reconnect_acres",
+					"help": "Provides a high potential for reconnection.",
+					"sub": "fn6Sub"
+				},
+				{
+					"group": "all", 
+					"index": "restore", 
+					"text": "Restore Condition", 
+					"type": "layer",
+					"lyrnum": 7,
+					"query": "restore_acres",
+					"help": "Provides a high potential for restoration.",
+					"sub": "fn7Sub"
+				},
+				{
+					"text": "<b>Flood Hazards</b>",
+					"type": "text"
+				},
+				{
+					"group": "all", 
+					"index": "hazard", 
+					"text": "Building Losses", 
+					"type": "layer",
+					"lyrnum": 8,
+					"query": "TotalLoss",
+					"help": "The estimates of economic losses were produced using HAZUS software which considers the following information about the built environment: structure location, occupancy type, square footage, first floor height above grade, as well as replacement and content values. The HAZUS model was run using a USGS-derived high floodplain depth grid to generate building loss estimates expected for the largest flood event. Initial results are reported by census block. In order to downscale these data and generate loss estimates for the floodplain segments, the percentage of each census block within a floodplain unit was calculated and only that proportion of the original total loss value was reported for each floodplain segment. It is important to note that there are uncertainties inherent in any loss estimation technique. <a href='xml/PG_HazusMethods.xml'target='blank'<b>Metadata</b><a>",
+					"slide": [
+						{
+							"mid": 100, 
+							"index": "hazloss", 
+							"max": 200, 
+							"min": 0, 
+							"step": 11, 
+							"text": "Loss Value in Millions", 
+							"type": "layer"
+						}
+					],
+					"sub": "hazSub"
+				},
+				{
+					type: "featureLayer",
+					"url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Puget_Sound/Floodplain_Explorer/MapServer/0",
+					"lineSym0": [161,70,18,1],
+					"lineWidth": 1,
+					"opcaity": 0.25,
+					"outfields": ["*"]
+				}	
+			]
+        }
+    ]
+}
