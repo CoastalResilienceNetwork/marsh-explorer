@@ -105,12 +105,12 @@
         ]
     },
     {
-        "displayName": "Global Water Blueprint",
+        "displayName": "Natural Land",
         "server": {
             "type": "ags",
             "layerType": "dynamic",
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Water_Blueprint/",
-            "name": "Natural Land"
+            "name": "Water_Blueprint"
         },
         "includeLayers": [
             {
