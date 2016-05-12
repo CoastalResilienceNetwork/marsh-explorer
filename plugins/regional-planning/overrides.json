@@ -2,6 +2,5 @@
     "height": 500,
     "width": 400,
     "resizable": false,
-    "hasCustomPrint": true,
-    "infoGraphic": "Hello",
+    "hasCustomPrint": true
 }
