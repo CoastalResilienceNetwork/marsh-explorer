@@ -1,110 +1,5 @@
 [
     {
-        "displayName": "Coastal Resilience (NJ)",
-        "server": {
-            "type": "ags",
-            "layerType": "dynamic",
-            "url": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey/",
-            "name": "New_Jersey"
-        },
-        "includeLayers": [
-            {
-                "name": "Boundaries",
-                "displayName": "Boundaries",
-                "includeLayers": [
-                    {
-                        "name": "Study Area",
-                        "server": {
-                            "type": "ags",
-                            "layerType": "dynamic",
-                            "url": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey/",
-                            "name": "New_Jersey"
-                        }
-                    },
-                    {
-                        "name": "Congressional Districts",
-                        "description": "(Custom) This polygon layer delineates the US Congressional District boundaries in New Jersey, 2012 - 2022."
-                    },
-                    {
-                        "name": "Town,city, village",
-                        "downloadUrl": "http://www2.census.gov/geo/tiger/GENZ2014/shp/cb_2014_us_ua10_500k.zip"
-                    },
-                    {
-                        "name": "Counties"
-                    },
-                    {
-                        "name": "Watershed Regions",
-                        "availableInRegions": ["galveston"]
-                    }
-                ]
-            },
-            {
-                "name": "Demographics",
-                "displayName": "Demographics",
-                "excludeLayers": [
-                    "Social Vulnerability Index"
-                ]
-            },
-            {
-                "name": "Ecological",
-                "displayName": "Ecological",
-                "includeAllLayers": true
-            },
-            {
-                "name": "Critical Facilities",
-                "displayName": "Planes, Trains, &amp; Automobiles",
-                "combine": true,
-                "includeLayers": [
-                    { "name": "Airport" },
-                    { "name": "Rail Station" },
-                    { "name": "NJ_Railroad" },
-                    { "name": "Evacuation Routes" }
-                ]
-            },
-            {
-                "name": "Coastal Hazards",
-                "includeLayers": [
-                    {
-                        "name": "Sea Level Rise Impact Analysis",
-                        "availableInRegions": ["the-ocean", "main"],
-                        "includeLayers": [
-                            {
-                                "name": "Current sea level",
-                                "displayName": "Sea Level (Current)"
-                            },
-                            {
-                                "name": "Sea Level Rise (1 ft.)"
-                            },
-                            {
-                                "name": "Sea Level Rise (2 ft.)"
-                            },
-                            {
-                                "name": "Sea Level Rise (3 ft.)"
-                            },
-                            {
-                                "name": "Sea Level Rise (4 ft.)"
-                            },
-                            {
-                                "name": "Sea Level Rise (5 ft.)"
-                            },
-                            {
-                                "name": "Sea Level Rise (6 ft.)"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Storm Surge Scenario Analysis"
-                    }
-                ]
-            },
-            {
-                "name": "Land Use",
-                "displayName": "Land Use",
-                "includeAllLayers": true
-            }
-        ]
-    },
-    {
         "displayName": "Natural Land",
         "server": {
             "type": "ags",
@@ -114,38 +9,14 @@
         },
         "includeLayers": [
             {
-                "name": "Target Watersheds",
-                "opacity": 0.8
+                "name": "Target Watersheds"
             },
             {
                 "name": "Percent of Natural Land in Target Watershed"
             },
             {
                 "name": "2010 Natural Land Classification",
-                "opacity": 0.2
-            }
-        ]
-    },
-    {
-        "displayName": "Alabama",
-        "server": {
-            "type": "ags",
-            "layerType": "dynamic",
-            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Gulf_of_Mexico/",
-            "name": "Alabama"
-        },
-        "includeLayers": [
-            {
-                "name": "1880 Oyster Reefs",
-                "opacity": 0.8
-            },
-            {
-                "name": "1968 Oyster Reefs"
-            },
-            {
-                "name": "1995 Oyster Reefs",
-                "opacity": 0.2,
-                "downloadUrl": "http://www.tceq.texas.gov/assets/public/gis/exports/au_oysterwaters.zip"
+                "opacity": 0.5
             }
         ]
     },
