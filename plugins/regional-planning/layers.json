@@ -12,7 +12,8 @@
                 "name": "Target Watersheds"
             },
             {
-                "name": "Percent of Natural Land in Target Watershed"
+                "name": "Percent of Natural Land in Target Watershed",
+                "opacity": 0.7
             },
             {
                 "name": "2010 Natural Land Classification",
