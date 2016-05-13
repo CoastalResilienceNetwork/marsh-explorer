@@ -14,22 +14,20 @@
                 "name": "Target Watersheds"
             },
             {
-                "name": "Percent of Natural Land in Target Watershed",
-                "opacity": 0.7,
-                        "reportDbLayerName": "Atlas_Global_TargetWatersheds_NaturalLand",
-                        "reports": [
-                            {
-                                "display": "Watersheds with Natural Lands",
-                                "units": "sq km",
-                                "field": "DVSN_Name"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
                 "name": "2010 Natural Land Classification",
                 "opacity": 0.5
+            },
+            {
+                "name": "Percent of Natural Land in Target Watershed",
+                "opacity": 0.7,
+                    "reportDbLayerName": "Atlas_Global_TargetWatersheds_NaturalLand",
+                    "reports": [
+                        {
+                            "display": "Watersheds with Natural Lands",
+                            "units": "sq km",
+                            "field": "DVSN_Name"
+                        }
+                ]
             }
         ]
     },
