@@ -5,7 +5,9 @@
             "type": "ags",
             "layerType": "dynamic",
             "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Water_Blueprint/",
-            "name": "Water_Blueprint"
+            "name": "Water_Blueprint",
+            "reportGpUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/DrawAndReport/getDrawAndReportDataMultiUnits/GPServer",
+            "reportDbPath": "//dev-services/data/waterblueprint.gdb"       
         },
         "includeLayers": [
             {
@@ -13,7 +15,17 @@
             },
             {
                 "name": "Percent of Natural Land in Target Watershed",
-                "opacity": 0.7
+                "opacity": 0.7,
+                        "reportDbLayerName": "Atlas_Global_TargetWatersheds_NaturalLand",
+                        "reports": [
+                            {
+                                "display": "Watersheds with Natural Lands",
+                                "units": "sq km",
+                                "field": "DVSN_Name"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "2010 Natural Land Classification",
