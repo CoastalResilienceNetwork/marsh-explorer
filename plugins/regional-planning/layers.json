@@ -32,7 +32,7 @@
         ]
     },
     {
-        "displayName": "Hurricane Sandy",
+        "displayName": "FEMA server: Hurricane Sandy",
         "server": {
             "type": "ags",
             "layerType": "dynamic",
