@@ -105,7 +105,7 @@
         {
             "id": "get-started",
             "title": "Getting Started",
-            "description": "<center>Ocean Wealth provides a way to calculate and describe in quantitative and spatial terms all that the ocean does for us to support smart investments and decision-making.</center><br><center><img src='img/tnc1.png' hspace=20>&nbsp<img src='img/boston_univ_rgb.jpg' hspace=20>&nbsp<img src='img/NOAA_logo_color_broadcast2.jpg' hspace=20>&nbsp<img src='img/CC-PLC-color2.jpg' hspace=20>&nbsp<img src='img/FERU-logo.jpg' hspace=20>&nbsp<img src='img/UBO-Hor.png' hspace=20>&nbsp<img src='img/wcs-logo.jpg' hspace=20>&nbsp<img src='img/WRI.png' hspace=20>&nbsp<img src='img/BS2.jpg' hspace=20></center>",
+            "description": "<center>The Global Water Blueprint...here you can includes links to the main website landing page, etc.</center><br><center><img src='img/tnc1.png' hspace=20>&nbsp<img src='img/boston_univ_rgb.jpg' hspace=20>&nbsp<img src='img/NOAA_logo_color_broadcast2.jpg' hspace=20>&nbsp<img src='img/CC-PLC-color2.jpg' hspace=20>&nbsp<img src='img/FERU-logo.jpg' hspace=20>&nbsp<img src='img/UBO-Hor.png' hspace=20>&nbsp<img src='img/wcs-logo.jpg' hspace=20>&nbsp<img src='img/WRI.png' hspace=20>&nbsp<img src='img/BS2.jpg' hspace=20></center>",
             "showSubRegions": false,
             "showByDefault": true,
             "categories": [
