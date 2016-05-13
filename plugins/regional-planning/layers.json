@@ -22,7 +22,31 @@
         ]
     },
     {
-        "displayName": "LA Map Layers",
+        "displayName": "External data: Hurricane Sandy",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://services.femadata.com/arcgis/rest/services/2012_Sandy/"
+        },
+        "includeLayers": [
+            {
+                "server": {
+                    "name": "SurgeBoundaries_Final_0214"
+                },
+                "name": "FINAL - High Resolution Storm Surge Extent",
+                "displayName": "Final FEMA Surge Area - February 2013"
+            },
+            {
+                "server": {
+                    "name": "2012_Sandy"
+                },
+                "name": "Hurricane Sandy - County Impact Analysis (click county for summary)",
+                "displayName": "Hurricane Sandy - County Impact Analysis"
+            }
+        ]
+    },
+    {
+        "displayName": "Using Draw & Report",
         "server": {
             "type": "ags",
             "layerType": "dynamic",
