@@ -40,12 +40,12 @@
         },
         "includeLayers": [
             {
-                "name": "SurgeBoundaries_Final_0214"
+                "name": "SurgeBoundaries_Final_0214",
                 "displayName": "Final FEMA Surge Area"
             },
             {
 
-                "name": "2012_Sandy"
+                "name": "2012_Sandy",
                 "displayName": "Hurricane Sandy - County Impact Analysis"
             }
         ]
