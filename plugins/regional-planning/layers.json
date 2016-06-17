@@ -14,12 +14,10 @@
                 "name": "Target Watersheds"
             },
             {
-                "name": "2010 Natural Land Classification",
-                "opacity": 0.5
+                "name": "2010 Natural Land Classification"
             },
             {
                 "name": "Percent of Natural Land in Target Watershed",
-                "opacity": 0.7,
                     "reportDbLayerName": "Atlas_Global_TargetWatersheds_NaturalLand",
                     "reports": [
                     {
@@ -28,65 +26,18 @@
                         "field": "DVSN_Name"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "displayName": "FEMA server: Hurricane Sandy",
-        "server": {
-            "type": "ags",
-            "layerType": "dynamic",
-            "url": "http://services.femadata.com/arcgis/rest/services/2012_Sandy/"
-        },
-        "includeLayers": [
-            {
-                "server": {
-                    "name": "SurgeBoundaries_Final_0214"
-                },
-                "name": "Final High Resolution Surge Area - Field-Verified February 14, 2013 (click on surge for details)",
-                "displayName": "Final FEMA Surge Area - February 2013"
             },
             {
-                "server": {
-                    "name": "2012_Sandy"
-                },
-                "name": "Hurricane Sandy - County Impact Analysis (click county for summary)",
-                "displayName": "Hurricane Sandy - County Impact Analysis"
-            }
-        ]
-    },
-    {
-        "displayName": "Using Draw & Report",
-        "server": {
-            "type": "ags",
-            "layerType": "dynamic",
-            "url": "http://54.241.26.242/arcgis/rest/services/LA_Freshwater",
-            "name": "LA_Map_Layers",
-            "reportGpUrl": "http://50.18.215.52/arcgis/rest/services/Louisiana_Freshwater/DrawAndReport/GPServer/getDrawAndReportDataPath",
-            "reportDbPath": "D:/arcgisserver/directories/arcgissystem/arcgisinput/Louisiana_Freshwater/Managed_Areas2.MapServer/extracted/v101/lfa.gdb"
-        },
-        "includeLayers": [
+                "name": "Freshwater Species Richness"
+            },
             {
-                "name": "Managed Areas",
-                "includeLayers": [
-                    {
-                        "name": "Wildlife Management Areas",
-                        "includeAllLayers": true,
-                        "reportDbLayerName": "All_WMA",
-                        "reports": [
-                            {
-                                "display": "Wildlife Management Area Total Area",
-                                "units": "sq km",
-                                "field": ""
-                            },
-                            {
-                                "display": "Wildlife Management Areas",
-                                "units": "sq km",
-                                "field": "NAME"
-                            }
-                        ]
-                    }
-                ]
+                "name": "Water Depletion Categories"
+            },
+            {
+                "name": "Percent Forest Loss (2000 - 2014)"
+            },
+            {
+                "name": "Terrestrial Species Richness"
             }
         ]
     }
