@@ -38,6 +38,29 @@
             },
             {
                 "name": "Terrestrial Species Richness"
+            },
+            {
+                "name": "Count of Imperiled Terrestrial Species"
+            },
+            {
+                "name": "Source Watersheds & Regions",
+                "displayName": "Source Watersheds & Regions",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Carbon",
+                "displayName": "Carbon",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Ecoregions",
+                "displayName": "Ecoregions",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Habitat Intactness",
+                "displayName": "Habitat Intactness",
+                "includeAllLayers": true
             }
         ]
     }
