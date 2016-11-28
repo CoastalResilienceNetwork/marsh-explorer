@@ -121,6 +121,9 @@
 		.ital{
 			font-style: italic;
 		}
+		.well{
+			display:none !important;
+		}	
 	</style>
     <body>
 		<p>Welcome to the Protecting Water Mapper, where users can quickly and intuitively explore data and analyses that underpin The Nature Conservancy&#39;s 
