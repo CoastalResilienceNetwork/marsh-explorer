@@ -105,6 +105,7 @@
         {
             "id": "get-started",
             "title": "Getting Started",
+			"categories": "",
             "description": "<!DOCTYPE html>
 <html>
 	<head><title></title></head>
