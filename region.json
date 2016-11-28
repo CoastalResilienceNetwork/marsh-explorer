@@ -189,26 +189,6 @@
             "showSubRegions": false,
             "showByDefault": true,
             "categories": [
-              {
-                "name": "Geographies",
-                "description": "Choose a specific region and it will take you there, or you can freely explore the map.",
-                "issues": [
-                    {
-                      "name": "Explore the map",
-                      "description": "",
-                      "saveCode": "eyJzY3JlZW4iOsSAc3BsaXRTxIPEhcSHOmZhbHNlLMSBeW5jTWFwc8SIxJXEl2V9xJptxKAwxIjEgGV4dMSGdMSsInR5cGXEiCLErsSwbsSyxJp4bWnEky0xMjc0ODQ3My4zMjU1MTE0NDbEmnnFgcWDNjcyMzYxNi41NMWjMjk5xYvEv8SpeMSIxYXFh8WJxYvFjcWPxZHFk8WVxZfFq8SINzYzOTIwxaE4McWHxbs5NjjEmsSLYXRpxJZSZWZlxITEncS4xIkid2tpZMWtMDIxMDDEmmzGimVzdFfGmMaaOjM4NTd9xKfEgWVsZWPEsGRCYcSYxKlwSW5kxK7EiDDGsHBhbmXEq8aVx4THhk51bWLGkceBxoh0xqNPZlBsdWfFgsSixpXEmMazxrVlZMeXx5nFgsSIbnVsbMSaxIzHpG7HnHvGr8av",
-                      "faIcon": "fa fa-globe",
-                      "faSize": 32
-                    },
-                    {
-                      "name": "Gulf of Mexico",
-                      "description": "",
-                      "saveCode": "eyJzY3JlZW4iOsSAc3BsaXRTxIPEhcSHOmZhbHNlLMSBeW5jTWFwc8SIxJXEl2V9xJptxKAwxIjEgGV4dMSGdMSsInR5cGXEiCLErsSwbsSyxJp4bWnEky0xMTY1NcWFOC4wNzI5MjA1NzjEmnnFgcSTMjTFjzI1xYs5Njk1NDc3MzkzxL/EqXjEiC04xZQ4xZszLjc2NMWFNDDFr8WWxavEiMW5xZA1MsWLN8WSMDMyxaYyxanEgXBhdGnEllJlZmXEhMSdxLjEiSJ3a2lkxIgxMDLGoDDEmmzGjmVzdFfGnMaeOjM4xZPEpyJjYWNoxpjEgF/GjXJ0xKI6W8StxK/EscSzxLXEt8S5xLvHg8WqxYLFrcWFxYfFiTHFi8WNxZzFksWUxbzHizrFmsWcxZ4uxaDFosWkxabFqMWqYcWsOsWuxbDFssW0xbbFuMW6N8W8x6PFvjDGgMaCxbTGhcaHxonGi8SLxo7GkGzGksaUxpZjxrjGmsasxp/GocajxqXGp8apxqvGncSIxq/GscayZnJhbWVJZMa+WzBdfciaxrLEmGxlY8SwZEJhxJjEqXBJbmTErsSIMsayxo1uZcSrxpnIsGVOdW1ixpXEiMakxIF0xqdPZlBsdWfFgsa+xIplyJ/IoWVkyYPJhceXbnVsbMSaxIzJkG7JiH3Jm30=",
-                      "faIcon": "fa fa-map-marker",
-                      "faSize": 32
-                    }
-                ]
-            } ,
             {
                 "name": "One-click Interactive Map",
                 "description": "Customized maps can be created here that target specific audiences or catered to workshops",
