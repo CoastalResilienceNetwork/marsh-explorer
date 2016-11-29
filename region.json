@@ -126,63 +126,38 @@
 		}	
 	</style>
     <body>
-		<p>Welcome to the Protecting Water Mapper, where users can quickly and intuitively explore data and analyses that underpin The Nature Conservancy&#39;s 
-			global-scale reports, <a href='https://global.nature.org/content/beyond-the-source' target='_blank'>Beyond the Source: The Environmental, Economic and 
-			Community Benefits of Source Water Protection</a> (forthcoming, January 2017), and <a href='https://global.nature.org/content/water-share' target='_blank'>
-			Water Share: Using Water Markets and Impact Investment to Drive Sustainability</a> (September 2016). This mapping site is part of a large and growing 
-			family of spatial decision tools supported through the <a href='http://coastalresilience.org/natural-solutions/toolkit/' target='_blank'>Natural Solutions 
-			Toolkit</a>. The Toolkit connects and coordinates multiple related programs and decision support tools that all advance the use of nature-based solutions 
-			that can reduce risk, advance climate change adaptation and mitigation and provide other benefits.
+		<p>Welcome to the Protecting Water Mapper, where users can quickly and intuitively explore data and analyses that underpin The Nature Conservancy&#39;s global-scale reports, 
+			<a href='https://global.nature.org/content/beyond-the-source' target='_blank'>Beyond the Source: The Environmental, Economic and Community Benefits of Source Water 
+				Protection</a> (forthcoming, January 2017), and <a href='https://global.nature.org/content/water-share' target='_blank'> Water Share: Using Water Markets and Impact 
+				Investment to Drive Sustainability</a> (September 2016). This mapping site is part of a large and growing family of spatial decision tools supported through the
+				<a href='http://coastalresilience.org/natural-solutions/toolkit/' target='_blank'>Natural Solutions Toolkit</a>. 
 		</p>  
-		<p class='bld'>Beyond the Source</p>
-		<p>The lands around our water sources serve as vital water infrastructure for cities around the world. These lands collect, store and filter our water, and when 
-			managed well, can provide a number of additional benefits to people and nature. <span class='ital'>Beyond the Source</span> seeks to illustrate how nature-based 
-			solutions, such as forest protection, reforestation and improved agricultural practices, can be implemented at a scale that will make a visible difference in our 
-			collective pursuit to create a sustainable world and improve the lives of billions of people.  
+		<p><span class='bld'>Beyond the Source</span> illustrates how nature-based solutions can help create a sustainable world and improve the lives of billions of people. From analysis of source 
+				watersheds of more than 4,000 large cities around the world, <span class='bld'>Beyond the Source</span> finds that four out of five cities can improve water quality and quantity and provide 
+				a variety of other benefits through forest protection, reforestation and improved agricultural practices. The report highlights water funds as a successful mechanism 
+				for downstream water users to fund upstream land conservation and restoration, securing improved water quality and water supplies and other benefits in return. 
 		</p>
-		<p><span class='ital'>Beyond the Source</span> analyzes source watersheds of more than 4,000 large cities around the world, and finds that four out of five cities 
-			can reduce sediment and nutrient pollution by a meaningful amount through forest protection, reforestation and improved agricultural practices, thus improving 
-			water quality and quantity. These natural infrastructure solutions also provide a number of co-benefits, including improving the health and livelihoods of people 
-			living in cities and rural areas, preserving plant and animal biodiversity, trapping and storing carbon dioxide emissions and building more resilient communities 
-			in the face of climate change. The research highlights water funds as a successful mechanism for downstream water users to fund upstream land conservation and 
-			restoration, securing improved water quality and supplies in return. An analysis of the cost for implementing source water protection activities shows that one in 
-			six cities could recoup the costs through savings in water treatment alone. Other cities can place a value on the co-benefits and &#34;stack&#34; the total value 
-			to realize a positive return on investment. 
-		</p>
-		<p><img src='img/curAndPoten.png' alt='Map of current and potential urban source watersheds'></p>
-		<p class='bld'>Water Share</p>
-		<p><span class='ital'>Water Share</span> explores the potential for water markets and impact investment to serve as part of the solution to global water scarcity. 
-			The premise is straightforward: today, nearly half of all people are affected by global water scarcity, and climate change will further exacerbate our water challenges. 
-			At least 37 countries in water-scarce regions have already established water allocation systems based on the issuance of water rights—these countries are potential 
-			candidates for impact investment-driven solutions through water markets. The report explores how enabling private actors to intervene on behalf of the environment 
-			and marginalized communities, water markets offer a powerful mechanism for alleviating scarcity, restoring ecosystems, and driving sustainable water management.
+		<p><span class='bld'>Water Share</span> explores the potential for water markets and impact investment to enhance global water scarcity. Today, nearly half of all people are affected by 
+			global water scarcity, and climate change will further exacerbate our water challenges. The report explores how water markets offer a powerful mechanism for alleviating scarcity, 
+			restoring ecosystems, and driving sustainable water management.
 		</p>	
 		<p class='bld'>Protecting Water Atlas functions</p>
-		<p class='under'>Water Benefits Explorer</p>
-		<p>Investing in watersheds produces a range of benefits and contributes to addressing other social, economic and ecological challenges in addition to water security. 
-			The Watershed Benefits Explorer app allows users to see where  investments may achieve the most co-benefits for people and nature. The app allows users to identify 
-			watersheds that meet user-defined criteria related to biodiversity conservation, climate change mitigation, and human health and well-being, as an aid in prioritizing 
-			investment and action.  . The app also enables users to select individual watersheds and view more detailed information about what co-benefits may, or may not, be 
-			enhanced by investments in that watershed.
+		<p><span class='under'>Water Benefits Explorer</span>: Investing in watersheds produces a range of benefits and contributes to addressing other social, economic and 
+			ecological challenges in addition to water security. The <span class='bld'>Watershed Benefits Explorer</span> app allows users to see where investments may achieve the most co-benefits for 
+			people and nature.	
 		</p>
-		<p class='under'>Water Funds Explorer</p>
-		<p>Water funds are a source water protection mechanism for sharing the benefits of healthy watersheds across communities.  Water funds have four common characteristics: 
-			science-based plans, a multi-stakeholder approach, a funding mechanism and implementation capacity. The Water Funds Explorer allows users to explore where current water 
-			funds have been established, to learn about their key attributes, and to query across different water funds to to learn the approaches and attributes various funds have 
-			in common.
+		<p><span class='under'>Water Funds Explorer</span>: Water funds are a source water protection mechanism for sharing the benefits of healthy watersheds across communities. 
+			<span class='bld'>The Water Funds Explorer</span> app allows users to 
+			explore where water funds have been established, to learn about their key attributes, and to query across different water funds to learn the approaches and attributes 
+			various funds have in common.
 		</p>	
-		<p><img src='img/waterFunds.png' alt='Water Fund Governence Board workflow'></p>
-		<p class='under'>Water Security Explorer (Coming Soon)</p>
-		<p>Investing in watershed health is a sustainable way to help achieve water security.  With the Water Security Explorer, a user will be able to identify (1) where 
-			sub-watersheds are of greatest importance for downstream drinking water, (2) where communities can reach user-defined water pollution reduction targets, and (3) what 
-			would be required to reach these targets in terms of area and cost.  In addition, the app will explore carbon mitigation potential.
+		<p><span class='under'>Water Security Explorer (Coming Soon)</span>: Investing in watershed health is a sustainable way to help achieve water security. With the 
+			<span class='bld'>Water Security Explorer</span>, a user will be able to identify (1) where sub-watersheds are of greatest importance for downstream drinking water, (2) where 
+			communities can reach user-defined water pollution reduction targets, and (3) what would be required to reach these targets in terms of area and cost.
 		</p>	
-		<p><img src='img/waterSecure.png' alt='Map of potential pollution reduction in urban source watersheds'></p>
-		<p class='under'>Water Share Explorer (Coming Soon)</p>
-		<p>Innovative investments can help to address water depletion. The Water Share app leverages WaterGAP3 depletion levels over various temporal scales and sectors to provide 
-			users with an exploratory tool to look at how, where and when water has been used in a given basin. In addition, this app will allow users to integrate some of the 
-			&#34;conditions&#34; developed in the <span class='ital'>Water Share</span> report regarding potential strategies to alleviate scarcity within a given basin depending on 
-			its depletion assessment. Finally, case studies will provide a more in-depth story of the social and environmental effects of depletion at the basin level. 
+		<p><span class='under'>Water Share Explorer (Coming Soon)</span>: 
+		Innovative investments can help address water depletion. The <span class='bld'>Water Share</span> app enables users to look at how, where and when water has been used and explore potential 
+		strategies to alleviate scarcity within a given basin. 
 		</p>	
     </body>
 </html>",
