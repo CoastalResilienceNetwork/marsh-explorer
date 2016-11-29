@@ -1,10 +1,6 @@
 {
     "plugins": [
     	{
-      		"repo": "regional-planning",
-      		"name": "regional-planning"
-        },
-    	{
       		"repo": "benefits_explorer",
       		"name": "benefits_explorer"
         }

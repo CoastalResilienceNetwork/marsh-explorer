@@ -27,15 +27,11 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
-        "regional-planning",
-        "feature_compare",
-        "floodplain_explorer",
 		"zoom_to",
         "measure",
         "legend_display",
         "full_extent",
         "subregion_toggle"
-    
     ],
     "print": {
         "printServerUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/OceanWealth/PrintingOW/GPServer/Export%20Web%20Map", "customPrintTemplatePrefix": "Letter ANSI A OW"  
