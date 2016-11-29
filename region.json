@@ -2,7 +2,7 @@
     "googleAnalyticsPropertyId": "7401895-16",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
     "titleMain": { "text": "Global Water Blueprint", "url": "http://dev.maps.waterblueprint.org/" },
-    "titleDetail": { "text": "Water Security", "url": "http://waterblueprint.org/" },
+    "titleDetail": { "text": "Water Security - BETA", "url": "http://waterblueprint.org/" },
 	"headerLinks": [
         { "text": "GET STARTED", "launchpadId": "get-started", "url": "" },
         { "text": "The Nature Conservancy", "url": "http://nature.org" },
