@@ -1,12 +1,8 @@
 {
     "plugins": [
-        {
-            "repo": "feature-compare",
-            "name": "feature_compare"
-        },
     	{
-      		"repo": "regional-planning",
-      		"name": "regional-planning"
+      		"repo": "benefits_explorer",
+      		"name": "benefits_explorer"
         }
     ]
 }

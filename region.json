@@ -2,7 +2,7 @@
     "googleAnalyticsPropertyId": "7401895-16",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
     "titleMain": { "text": "Global Water Blueprint", "url": "http://dev.maps.waterblueprint.org/" },
-    "titleDetail": { "text": "Water Funds and Security", "url": "http://waterblueprint.org/" },
+    "titleDetail": { "text": "Water Security - BETA", "url": "http://waterblueprint.org/" },
 	"headerLinks": [
         { "text": "GET STARTED", "launchpadId": "get-started", "url": "" },
 		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
@@ -28,21 +28,17 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
-        "regional_planning",
-        "feature_compare",
-        "floodplain_explorer",
 		"zoom_to",
         "measure",
         "legend_display",
         "full_extent",
         "subregion_toggle"
-    
     ],
     "print": {
         "printServerUrl": "http://dev.services2.coastalresilience.org/arcgis/rest/services/OceanWealth/PrintingOW/GPServer/Export%20Web%20Map", "customPrintTemplatePrefix": "Letter ANSI A OW"  
     },
     "colors": {
-       "primary": "#C7FEFF",
+       "primary": "#5E94B6",
        "secondary": "#5E94B6"
     },
     "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
@@ -104,33 +100,75 @@
      "launchpads": [
         {
             "id": "get-started",
-            "title": "Getting Started",
-            "description": "<center>Ocean Wealth provides a way to calculate and describe in quantitative and spatial terms all that the ocean does for us to support smart investments and decision-making.</center><br><center><img src='img/tnc1.png' hspace=20>&nbsp<img src='img/boston_univ_rgb.jpg' hspace=20>&nbsp<img src='img/NOAA_logo_color_broadcast2.jpg' hspace=20>&nbsp<img src='img/CC-PLC-color2.jpg' hspace=20>&nbsp<img src='img/FERU-logo.jpg' hspace=20>&nbsp<img src='img/UBO-Hor.png' hspace=20>&nbsp<img src='img/wcs-logo.jpg' hspace=20>&nbsp<img src='img/WRI.png' hspace=20>&nbsp<img src='img/BS2.jpg' hspace=20></center>",
+            "title": "Protecting Water Mapper",
+            "description": "<!DOCTYPE html>
+<html>
+	<head><title></title></head>
+	<style>
+		body { 
+			background-color: white; font-family: 'Archivo Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif; color: #000; font-weight: 400; margin: 10px;
+		}
+		.bld{
+			font-weight:bold;
+		}
+		.under{
+			text-decoration:underline;
+		}
+		.ital{
+			font-style: italic;
+		}
+		.well{
+			display:none !important;
+		}	
+	</style>
+    <body>
+		<p>Welcome to the Protecting Water Mapper, where users can quickly and intuitively explore data and analyses that underpin The Nature Conservancy&#39;s global-scale reports, 
+			<a href='https://global.nature.org/content/beyond-the-source' target='_blank'>Beyond the Source: The Environmental, Economic and Community Benefits of Source Water 
+				Protection</a> (forthcoming, January 2017), and <a href='https://global.nature.org/content/water-share' target='_blank'> Water Share: Using Water Markets and Impact 
+				Investment to Drive Sustainability</a> (September 2016). This mapping site is part of a large and growing family of spatial decision tools supported through the
+				<a href='http://coastalresilience.org/natural-solutions/toolkit/' target='_blank'>Natural Solutions Toolkit</a>. 
+		</p>  
+		<p><span class='bld'>Beyond the Source</span> illustrates how nature-based solutions can help create a sustainable world and improve the lives of billions of people. From analysis of source 
+				watersheds of more than 4,000 large cities around the world, <span class='bld'>Beyond the Source</span> finds that four out of five cities can improve water quality and quantity and provide 
+				a variety of other benefits through forest protection, reforestation and improved agricultural practices. The report highlights water funds as a successful mechanism 
+				for downstream water users to fund upstream land conservation and restoration, securing improved water quality and water supplies and other benefits in return. 
+		</p>
+		<p><span class='bld'>Water Share</span> explores the potential for water markets and impact investment to enhance global water scarcity. Today, nearly half of all people are affected by 
+			global water scarcity, and climate change will further exacerbate our water challenges. The report explores how water markets offer a powerful mechanism for alleviating scarcity, 
+			restoring ecosystems, and driving sustainable water management.
+		</p>	
+		<p class='bld'>Protecting Water Atlas functions</p>
+		<p><span class='under'>Water Benefits Explorer</span>: Investing in watersheds produces a range of benefits and contributes to addressing other social, economic and 
+			ecological challenges in addition to water security. The <span class='bld'>Watershed Benefits Explorer</span> app allows users to see where investments may achieve the most co-benefits for 
+			people and nature.	
+		</p>
+		<p><span class='under'>Water Funds Explorer</span>: Water funds are a source water protection mechanism for sharing the benefits of healthy watersheds across communities. 
+			<span class='bld'>The Water Funds Explorer</span> app allows users to 
+			explore where water funds have been established, to learn about their key attributes, and to query across different water funds to learn the approaches and attributes 
+			various funds have in common.
+		</p>	
+		<p><span class='under'>Water Security Explorer (Coming Soon)</span>: Investing in watershed health is a sustainable way to help achieve water security. With the 
+			<span class='bld'>Water Security Explorer</span>, a user will be able to identify (1) where sub-watersheds are of greatest importance for downstream drinking water, (2) where 
+			communities can reach user-defined water pollution reduction targets, and (3) what would be required to reach these targets in terms of area and cost.
+		</p>	
+		<p><span class='under'>Water Share Explorer (Coming Soon)</span>: 
+		Innovative investments can help address water depletion. The <span class='bld'>Water Share</span> app enables users to look at how, where and when water has been used and explore potential 
+		strategies to alleviate scarcity within a given basin. 
+		</p>	
+    </body>
+</html>",
             "showSubRegions": false,
             "showByDefault": true,
             "categories": [
-              {
-                "name": "Geographies",
-                "description": "Choose a specific region and it will take you there, or you can freely explore the map.",
-                "issues": [
-                    {
-                      "name": "Explore the map",
-                      "description": "",
-                      "saveCode": "eyJzY3JlZW4iOsSAc3BsaXRTxIPEhcSHOmZhbHNlLMSBeW5jTWFwc8SIxJXEl2V9xJptxKAwxIjEgGV4dMSGdMSsInR5cGXEiCLErsSwbsSyxJp4bWnEky0xMjc0ODQ3My4zMjU1MTE0NDbEmnnFgcWDNjcyMzYxNi41NMWjMjk5xYvEv8SpeMSIxYXFh8WJxYvFjcWPxZHFk8WVxZfFq8SINzYzOTIwxaE4McWHxbs5NjjEmsSLYXRpxJZSZWZlxITEncS4xIkid2tpZMWtMDIxMDDEmmzGimVzdFfGmMaaOjM4NTd9xKfEgWVsZWPEsGRCYcSYxKlwSW5kxK7EiDDGsHBhbmXEq8aVx4THhk51bWLGkceBxoh0xqNPZlBsdWfFgsSixpXEmMazxrVlZMeXx5nFgsSIbnVsbMSaxIzHpG7HnHvGr8av",
-                      "faIcon": "fa fa-globe",
-                      "faSize": 32
-                    }
-                ]
-            } ,
             {
                 "name": "One-click Interactive Map",
-                "description": "Customized maps scenarios for exploring ocean ecosystem services globally and regionally.",
+                "description": "Customized maps can be created here that target specific audiences or catered to workshops",
                 "issues": [
                     {
-                      "name": "Coral Tourism Value: Caribbean",
+                      "name": "NY Natural Lands",
                       "description": "Example one-click map",
                       "saveCode": "e34df34rd3....3434",
-                      "saveCode": "eyJzY3JlZW4iOsSAc3BsaXRTxIPEhcSHOmZhbHNlLMSBeW5jTWFwc8SIxJXEl2V9xJptxKAwxIjEgGV4dMSGdMSsInR5cGXEiCLErsSwbsSyxJp4bWnEky0xMjA3MDkzNS41MDY3OTE4MjTEmnnFgcWDMjg1Nzg0LjI3NTE0xYk5xagzxL/EqXjEiC01Njk2xbE4LsWfxaYzNjEwMcWXxazEiDMzMDQ5MjHFjTY1NcWUNMWcxJrEi2F0acSWUmVmZcSExJ3EuMSJIndraWTEiMW7xoYwMMSabMaRZXN0V8afxqE6M8WcN8SnImNhY2jGm8SAX3BhcnTEojpbxK3Er8SxxLPEtcS3xLnEu8eGxavFgsWuxYXFh8WJxYvFjcWPxZHFk8WVxb7HjjotxZvFncWfxaHFo8WlxafFqcWrYcWtx5vFsMWyxbTFtjTFuMW6xbzFvsemxoDGgsaExobGiMaKxozGjsSBxr3GksaUxpbGmMSGY8a6xp3GrsaiMMakxqYixqjEsMarxq3GoMaAxrJ9xrRmcmFtZUlkx4FbMF19yJ7GtMSYbGVjxLBkQmHEmMSpcEluZMSuxIgwxrTGvW5lxKvGnMi0ZU51bWLGmMixxo90xqlPZlBsdWfFgseBxIplyKPIpWVkyYbJiMeaIsSMyZNucy/EhMSRxpFpb25fdG91cmlzbSLEmsa3xpJ2ZVN1YsSEyYnJn8SIbnVsbMSayZbJicmYxLPJu8mKyZrIpMSEyZ3Jn8mhyaPJpcmnxLNyb290L8aVyZzGksmfIGHIriBUyofJpm0vT8iCypUgV2XElnRoOcSzb8a9Y8SOecixLjfEmsa4yKRryZDEiHRydcSZInbJpmliyKNMYXnGmMiZyJs5yJ7EmsmtcnPJnsSTIsaHMSLIksa0yatpya3Jr8mxZcmzxJPJtsm4yJI=",
+                      "saveCode": "eyJzY3JlZW4iOsSAc3BsaXRTxIPEhcSHOmZhbHNlLMSBeW5jTWFwc8SIxJXEl2V9xJptxKAwxIjEgGV4dMSGdMSsInR5cGXEiCLErsSwbsSyxJp4bWnEky04NjM5MTU5Ljk3NzDFiTUwNsSaecWBxJM0xY7FijQwLjcyNDM1ODQ5OcS/xKl4xIgtN8WFNzQ1McWexYc0NMWkxZPFlcWpxIjFscWIN8WjLsWJODIyOTgzN8SaxIthdGnEllJlZmXEhMSdxLjEiSJ3a2lkxIgxMDLGnTDEmmzGi2VzdFfGmcabOjM4NTfEpyJjYWNoxpXEgF9wYXJ0xKI6W8StxK/EscSzxLXEt8S5xLvHgsWoxYLFq8WFxYfFicWLxY3Fj8WRxbgixZbHijrFmcW+OcWcxZ7FoMWixaTFpsWoYcWqOsWsxa7FsMWyN8W0xbbFnMWUx5TFujrFvDHFvjjGgMWjxoPGhcaHxonGucaMxo7GkMaSxIZjxrbGl8apxpzGnsagxqLGpMamxqjGmsSIxqzGrn3GsGZyYW1lSWTGvVswXX3InMawxJhsZWPEsGRCYcSYxKlwSW5kxK7EiDDGsMa5bmXEq8aWyLJlTnVtYsaSyK/GiXTGpE9mUGx1Z8WCxr3EimXIocijZWTJhMmGx5YixIzJkW5zL8SEyYdvbsSWLcSMYW5uxYJnIsSayZTJh8mWxLPJp8mIyZhlyZrJnGzJnsajyaHJo8SzxqN5xpLJicaxdXLGk3TGj8mvxIhudWxsxJpmaWzEsHJUxLvEucmlxIHJi8iiyKRMYcm4csiZIkZFTUEgxJhydsaSOiBIybxyacayyLMgU8mgZHkvRsWCxJYgypvKncqsybxnZSBBxIRhIC3KtWVicnXGunkgMsWQM8qQTsaLybzKtMqVyKwvUMaSyIHEvSBvZiDLjnTLkGwgy5JkIMWCIFTGusq6dCBXxqTKmMa1xptdxJrErsiyyK1kypXKl8qZyrbKnsqgyqJyyqTKpsm9yqnJoMq7yq3IrHnLjcuPyJPLoMuiIsuxIsm3xpJPxrljxI7Mh8a+zI7FgmZvQm94y7fGksiXyoLKhGzGsGTIk3fGj3BvxrvEs8a6ZWHJgsiryovGpcSyOsqDyoXIkMy5fQ==",
                       "faIcon": "fa fa-leaf",
                       "faSize": 32
                     }
