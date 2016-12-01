@@ -3,6 +3,14 @@
     	{
       		"repo": "benefits_explorer",
       		"name": "benefits_explorer"
+        },
+    	{
+            "repo": "regional-planning",
+            "name": "regional-planning"
+        },
+    	{
+      		"repo": "feature-compare",
+      		"name": "feature_compare"
         }
     ]
 }
