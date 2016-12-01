@@ -3,10 +3,6 @@
     	{
       		"repo": "benefits_explorer",
       		"name": "benefits_explorer"
-        },
-		{
-      		"repo": "water_funds",
-      		"name": "water_funds"
         }
     ]
 }
