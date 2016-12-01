@@ -1,12 +1,12 @@
 {
     "plugins": [
     	{
-            "repo": "regional-planning",
-            "name": "regional-planning"
+      		"repo": "benefits_explorer",
+      		"name": "benefits_explorer"
         },
-    	{
-      		"repo": "feature-compare",
-      		"name": "feature_compare"
+		{
+      		"repo": "water_funds",
+      		"name": "water_funds"
         }
     ]
 }
