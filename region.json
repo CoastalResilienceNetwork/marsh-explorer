@@ -1,13 +1,17 @@
 {
     "googleAnalyticsPropertyId": "7401895-16",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
-    "titleMain": { "text": "Global Water Blueprint", "url": "http://dev.maps.waterblueprint.org/" },
-    "titleDetail": { "text": "Water Security - BETA", "url": "http://waterblueprint.org/" },
+    "titleMain": { "text": "HOME", "url": "http://protectingwater.org/" },
+    "titleDetail": { "text": "Protecting Water Atlas", "url": "http://maps.protectingwater.org/" },
 	"headerLinks": [
-        { "text": "GET STARTED", "launchpadId": "get-started", "url": "" },
-		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
-        { "text": "The Nature Conservancy", "url": "http://nature.org" },
-        { "text": "Legal Disclosure", "url": "http://www.nature.org/about-us/governance/terms-of-use.xml" }
+        { "text": "HELP", "url": "javascript:;", "elementId": "help-overlay-start"},
+        { "text": "GO TO", "url": "#", "items": [
+                { "text": "The Nature Conservancy", "url": "http://nature.org" },
+                { "text": "GitHub Tool License", "url": "https://github.com/CoastalResilienceNetwork/GeositeFramework/blob/master/LICENSE"},
+                { "text": "Legal Disclosure", "url": "http://www.nature.org/about-us/governance/terms-of-use.xml" }
+            ]
+        },
+        { "text": "GET STARTED", "launchpadId": "get-started", "url": "" }
     ],
     "initialExtent": [
         -130,
@@ -16,6 +20,7 @@
         55
     ],
     "basemaps": [
+		{ "name": "Streets"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" },
         { "name": "Basic"              , "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer" },
         { "name": "Basic Dark Gray"    , "url": "http://server.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer"},
         { "name": "National Geographic", "url": "http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer" },
@@ -24,7 +29,6 @@
         { "name": "Imagery"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" },
         { "name": "Physical"           , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer" },
         { "name": "Shaded Relief"      , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer" },
-        { "name": "Streets"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" },
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
