@@ -4,13 +4,14 @@
     "titleMain": { "text": "HOME", "url": "http://protectingwater.org/" },
     "titleDetail": { "text": "Protecting Water Atlas", "url": "http://maps.protectingwater.org/" },
 	"headerLinks": [
-        { "text": "GET STARTED", "launchpadId": "get-started", "url": "" },
+        { "text": "HELP", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "GO TO", "url": "#", "items": [
                 { "text": "The Nature Conservancy", "url": "http://nature.org" },
                 { "text": "GitHub Tool License", "url": "https://github.com/CoastalResilienceNetwork/GeositeFramework/blob/master/LICENSE"},
                 { "text": "Legal Disclosure", "url": "http://www.nature.org/about-us/governance/terms-of-use.xml" }
             ]
-        }
+        },
+        { "text": "GET STARTED", "launchpadId": "get-started", "url": "" }
     ],
     "initialExtent": [
         -130,
