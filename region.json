@@ -43,7 +43,7 @@
     },
     "colors": {
        "primary": "#5E94B6",
-       "secondary": "#5E94B6"
+       "secondary": "#2F6384"
     },
     "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "identifyEnabled": true,
