@@ -4,7 +4,7 @@
     "titleMain": { "text": "Protecting Water Atlas", "url": "http://coastalresilience.org/" },
     "titleDetail": { "text": "", "url": "http://coastalresilience.org/geographies/new-york-and-connecticut" },
 	"headerLinks": [
-		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start", "popup": true},
+		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "The Nature Conservancy", "url": "http://www.nature.org/ourinitiatives/habitats/riverslakes/index.htm?intc=nature.tnav.ourwork" },
         { "text": "ProtectingWater.org", "url": "http://www.protectingwater.org/" },
         { "text": "Beyond the Source", "url": "http://www.nature.org/beyondthesource" },
