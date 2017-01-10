@@ -102,7 +102,7 @@
 					"pluginName": "water_funds_prototype"
 				},
 				{
-					"title": "Water Share Explorer",
+					"title": "Water Scarcity Explorer",
 					"description": "Innovative investments can help address water depletion. The Water Share app enables users to look at how, where and when water has been used and explore potential strategies to alleviate scarcity within a given basin.",
 					"pluginName": "water_share"
 				}
