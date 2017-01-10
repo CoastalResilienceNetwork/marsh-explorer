@@ -4,7 +4,7 @@
     "titleMain": { "text": "Protecting Water Atlas", "url": "http://coastalresilience.org/" },
     "titleDetail": { "text": "", "url": "http://coastalresilience.org/geographies/new-york-and-connecticut" },
 	"headerLinks": [
-		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
+		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start", "popup": true},
         { "text": "The Nature Conservancy", "url": "http://www.nature.org/ourinitiatives/habitats/riverslakes/index.htm?intc=nature.tnav.ourwork" },
         { "text": "ProtectingWater.org", "url": "http://www.protectingwater.org/" },
         { "text": "Beyond the Source", "url": "http://www.nature.org/beyondthesource" },
@@ -88,7 +88,7 @@
 				restoring ecosystems, and driving sustainable water management.</p>",
             "plugins": [
 				{
-					"title": "Water Security Explorer",
+					"title": "Source Protection Explorer",
 					"description": "Investing in watershed health is a sustainable way to enhance water security. The Water Security Explorer enables users to explore cities that can meet specified pollution reduction targets using conservation actions and the area and cost required to reach these targets.",
 					"pluginName": "water_security"
 				},
