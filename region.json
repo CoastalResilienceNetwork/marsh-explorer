@@ -49,7 +49,7 @@
         "full_extent",
         "subregion_toggle",
 		"water_security",
-		"benefits_explorer_prototype",
+		"benefits_explorer",
 		"water_funds_prototype",
 		"water_funds"
     ],
@@ -95,7 +95,7 @@
                 {
                 	"title": "Benefits Explorer",
                 	"description": "Investing in watersheds produces a range of benefits that address other social, economic and ecological challenges in addition to water security. The Benefits Explorer app allows users to see where investments may achieve the most co-benefits for people and nature.",
-               		"pluginName": "benefits_explorer_prototype"
+               		"pluginName": "benefits_explorer"
                 },
 				{
 					"title": "Water Funds Explorer",
