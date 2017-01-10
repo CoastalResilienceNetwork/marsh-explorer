@@ -59,10 +59,10 @@
 	"headerLogoPath": "http://maps.coastalresilience.org/network/img/TNCLogoPrimary_RGB2.jpg"
     },
     "colors": {
-       "primary": "#26648E",
-       "secondary": "#26648E",
+       "primary": "#2F6384",
+       "secondary": "#5E94B6",
        "tertiary": "#333333",
-	"active": "#3b91be"
+	"active": "#0096D6"
     },
    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "subregions": {
