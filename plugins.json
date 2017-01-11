@@ -1,12 +1,20 @@
 {
-    "plugins": [
-    	{
-      		"repo": "benefits_explorer",
-      		"name": "benefits_explorer"
-        },
-		{
-      		"repo": "water_funds",
-      		"name": "water_funds"
-        }
-    ]
+  "plugins": [
+    {
+		"repo": "benefits_explorer",
+		"name": "benefits_explorer"
+    },
+	{
+		"repo": "water_funds_prototype",
+		"name": "water_funds_prototype"
+	},
+	{
+		"repo": "water_security",
+		"name": "water_security"
+	},
+	{
+		"repo": "water_share",
+		"name": "water_share"
+	}
+  ]
 }
