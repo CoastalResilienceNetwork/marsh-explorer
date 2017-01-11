@@ -9,7 +9,7 @@
         { "text": "ProtectingWater.org", "url": "http://www.protectingwater.org/" },
         { "text": "Beyond the Source", "url": "http://www.nature.org/beyondthesource" },
         { "text": "Water Share", "url": "http://www.nature.org/watershare" },
-        { "text": "Data Documentation", "url": "plugins/benefits_explorer_prototype/images/MethodsDocumentation.pdf" },
+        { "text": "Data Documentation", "url": "plugins/benefits_explorer/images/MethodsDocumentation.pdf" },
         { "text": "Legal Disclosure", "url": "http://coastalresilience.org/terms-of-use/" }
     ],
     "regionLinks": [
