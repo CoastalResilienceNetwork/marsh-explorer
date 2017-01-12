@@ -65,14 +65,6 @@
 		"active": "#0096D6"
     },
    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
-    "subregions": {
-        "hideAtZoomLevel": 8,
-        "color": "#00C5CD",
-        "outlineColor": "#008000",
-        "opacity": 0.2,
-        "clickToFocus": true,
-        "hideByDefault": true
-    },
     "launchpad": {
             "title": "",
             "description": "<p>Welcome to the Protecting Water Atlas, where users can explore data and analyses that underpin The Nature Conservancy&#39;s global-scale reports, <a href='https://global.nature.org/content/beyond-the-source' target='_blank'>Beyond the Source: The Environmental, Economic and Community Benefits of Source Water 
