@@ -80,7 +80,7 @@
             "plugins": [
 				{
 					"title": "Source Protection Explorer",
-					"description": "Investing in watershed health is a sustainable way to enhance water security. The Water Security Explorer enables users to explore cities that can meet specified pollution reduction targets using conservation actions and the area and cost required to reach these targets.",
+					"description": "Investing in watershed health is a sustainable way to enhance water security. The Source Protection Explorer enables users to explore cities that can meet specified pollution reduction targets using conservation actions and the area and cost required to reach these targets.",
 					"pluginName": "water_security"
 				},
                 {
@@ -95,7 +95,7 @@
 				},
 				{
 					"title": "Water Scarcity Explorer",
-					"description": "Innovative investments can help address water depletion. The Water Share app enables users to look at how, where and when water has been used and explore potential strategies to alleviate scarcity within a given basin.",
+					"description": "Innovative investments can help address water depletion. The Water Scarcity Explorer enables users to look at how, where and when water has been used and explore potential strategies to alleviate scarcity within a given basin.",
 					"pluginName": "water_share"
 				}
             ]
