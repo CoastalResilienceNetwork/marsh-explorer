@@ -91,7 +91,7 @@
 				{
 					"title": "Water Funds Explorer",
 					"description": "Water Funds are a way to protect source water and share the benefits of healthy watersheds across communities. The Water Funds Explorer app allows users to view where water funds have been established, learn about their key attributes, and query across funds to see what approaches and attributes various funds have in common.",
-					"pluginName": "water_funds_prototype"
+					"pluginName": "water_funds"
 				},
 				{
 					"title": "Water Scarcity Explorer",
