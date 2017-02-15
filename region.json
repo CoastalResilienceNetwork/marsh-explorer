@@ -67,16 +67,7 @@
    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "launchpad": {
             "title": "",
-            "description": "<p>Welcome to the Protecting Water Atlas, where users can explore data and analyses that underpin The Nature Conservancy&#39;s global-scale reports, <a href='https://global.nature.org/content/beyond-the-source' target='_blank'>Beyond the Source: The Environmental, Economic and Community Benefits of Source Water 
-				Protection</a>, and <a href='https://global.nature.org/content/water-share' target='_blank'> Water Share: Using Water Markets and Impact 
-				Investment to Drive Sustainability</a>. This mapping site is part of a family of spatial decision tools supported through the 
-				<a href='http://coastalresilience.org/natural-solutions/toolkit/' target='_blank'>Natural Solutions Toolkit</a>.</p>
-				<p>From analyses of source watersheds of more than 4,000 large cities, <b>Beyond the Source</b> finds that natural solutions can improve water quality for four out 
-				of five cities and provide a variety of other co-benefits to people and nature. The report highlights water funds as a successful funding, governance, and implementation 
-				mechanism for source water protection.</p>
-				<p><b>Water Share</b> explores the potential for water markets and impact investment to enhance global water scarcity. Today, nearly half of all people are affected by global 
-				water scarcity, and climate change will further exacerbate our water challenges. The report explores how water markets offer a powerful mechanism for alleviating scarcity, 
-				restoring ecosystems, and driving sustainable water management.</p>",
+            "description": "<p>Welcome to the Protecting Water Atlas, where users can explore data and analyses that underpin The Nature Conservancy&#39;s global-scale reports, <a href='https://global.nature.org/content/beyond-the-source' target='_blank'>Beyond the Source: The Environmental, Economic and Community Benefits of Source Water Protection < /a>, and <a href='https:/ / global.nature.org / content / water - share ' target='_blank '> Water Share: Using Water Markets and Impact Investment to Drive Sustainability < /a>. This mapping site is part of a family of spatial decision tools supported through the <a href = 'http://coastalresilience.org/natural-solutions/toolkit/' target = '_blank' > Natural Solutions Toolkit < /a>.</p ><p> From analyses of source watersheds of more than 4,000 large cities, < b > Beyond the Source </b> finds that natural solutions can improve water quality for four out of five cities and provide a variety of other co - benefits to people and nature.The report highlights water funds as a successful funding, governance, and implementation mechanism for source water protection. </p> <p> <b> Water Share </b> explores the potential for water markets and impact investment to enhance global water scarcity. Today, nearly half of all people are affected by global water scarcity, and climate change will further exacerbate our water challenges.The report explores how water markets offer a powerful mechanism for alleviating scarcity, restoring ecosystems, and driving sustainable water management. < /p>",
             "plugins": [
 				{
 					"title": "Source Protection Explorer",
