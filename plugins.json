@@ -1,10 +1,6 @@
 {
   "plugins": [
     {
-		"repo": "map-tree",
-		"name": "layer_selector"
-	},
-    {
   	  "repo": "umr-floodplain",
   	  "name": "umr-floodplain",
   	  "org": "FreshwaterNetwork"
