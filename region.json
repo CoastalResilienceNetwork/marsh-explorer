@@ -67,7 +67,7 @@
    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "launchpad": {
             "title": "",
-            "description": "<pWelcome to America's Great River region. There's lots of cool stuff to check out here.</p>",
+            "description": "<p>Welcome to America's Great River region. There's lots of cool stuff to check out here.</p>",
             "plugins": [
 				{
 					"title": "UMR Floodplain Explorer",
