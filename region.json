@@ -67,36 +67,12 @@
    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "launchpad": {
             "title": "",
-            "description": "<p>Welcome to the Protecting Water Atlas, where users can explore data and analyses that underpin The Nature Conservancy&#39;s global-scale reports, <a href='https://global.nature.org/content/beyond-the-source' target='_blank'>Beyond the Source: The Environmental, Economic and Community Benefits of Source Water 
-				Protection</a>, and <a href='https://global.nature.org/content/water-share' target='_blank'> Water Share: Using Water Markets and Impact 
-				Investment to Drive Sustainability</a>. This mapping site is part of a family of spatial decision tools supported through the 
-				<a href='http://coastalresilience.org/natural-solutions/toolkit/' target='_blank'>Natural Solutions Toolkit</a>.</p>
-				<p>From analyses of source watersheds of more than 4,000 large cities, <b>Beyond the Source</b> finds that natural solutions can improve water quality for four out 
-				of five cities and provide a variety of other co-benefits to people and nature. The report highlights water funds as a successful funding, governance, and implementation 
-				mechanism for source water protection.</p>
-				<p><b>Water Share</b> explores the potential for water markets and impact investment to enhance global water scarcity. Today, nearly half of all people are affected by global 
-				water scarcity, and climate change will further exacerbate our water challenges. The report explores how water markets offer a powerful mechanism for alleviating scarcity, 
-				restoring ecosystems, and driving sustainable water management.</p>",
+            "description": "<pWelcome to America's Great River region. There's lots of cool stuff to check out here.</p>",
             "plugins": [
 				{
-					"title": "Source Protection Explorer",
-					"description": "Investing in watershed health is a sustainable way to enhance water security. The Source Protection Explorer enables users to explore cities that can meet specified pollution reduction targets using conservation actions and the area and cost required to reach these targets.",
-					"pluginName": "water_security"
-				},
-                {
-                	"title": "Benefits Explorer",
-                	"description": "Investing in watersheds produces a range of benefits that address other social, economic and ecological challenges in addition to water security. The Benefits Explorer app allows users to see where investments may achieve the most co-benefits for people and nature.",
-               		"pluginName": "benefits_explorer"
-                },
-				{
-					"title": "Water Funds Explorer",
-					"description": "Water Funds are a way to protect source water and share the benefits of healthy watersheds across communities. The Water Funds Explorer app allows users to view where water funds have been established, learn about their key attributes, and query across funds to see what approaches and attributes various funds have in common.",
-					"pluginName": "water_funds"
-				},
-				{
-					"title": "Water Scarcity Explorer",
-					"description": "Innovative investments can help address water depletion. The Water Scarcity Explorer enables users to look at how, where and when water has been used and explore potential strategies to alleviate scarcity within a given basin.",
-					"pluginName": "water_share"
+					"title": "UMR Floodplain Explorer",
+					"description": "The Upper Mississippi River Flodplain Explorer identifies floodplain units...",
+					"pluginName": "umr-floodplain"
 				}
             ]
       }
