@@ -1,7 +1,9 @@
 {
   "plugins": [
-  	"repo": "umr-floodplain",
-  	"name": "umr-floodplain",
-  	"org": "FreshwaterNetwork"
+    {
+  	  "repo": "umr-floodplain",
+  	  "name": "umr-floodplain",
+  	  "org": "FreshwaterNetwork"
+    }
    ]
 }
