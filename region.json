@@ -1,7 +1,7 @@
 {
     "googleAnalyticsPropertyId": "7401895-38",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
-    "titleMain": { "text": "Protecting Water Atlas - Beta", "url": "http://coastalresilience.org/" },
+    "titleMain": { "text": "America's Great River", "url": "http://coastalresilience.org/" },
     "titleDetail": { "text": "", "url": "http://coastalresilience.org/geographies/new-york-and-connecticut" },
 	"headerLinks": [
 		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
@@ -26,10 +26,10 @@
             { "text": "Washington", "url": "http://maps.coastalresilience.org/pugetsound" }
     ],
     "initialExtent": [
-        -130,
-        -50,
-        130,
-        55
+        -102.00,
+        28.67,
+        -83.00,
+        42.84
     ],
     "basemaps": [
 		{ "name": "Streets"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" },
@@ -61,8 +61,8 @@
     "colors": {
        "primary": "#2F6384",
        "secondary": "#5E94B6",
-       "tertiary": "#333333",
-		"active": "#0096D6"
+       "primary": "#457545",
+        "secondary": "#81b94d",
     },
    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "launchpad": {
