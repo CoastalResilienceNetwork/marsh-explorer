@@ -1,20 +1,9 @@
 {
   "plugins": [
     {
-		"repo": "benefits_explorer",
-		"name": "benefits_explorer"
-    },
-	{
-		"repo": "water_funds",
-		"name": "water_funds"
-	},
-	{
-		"repo": "water_security",
-		"name": "water_security"
-	},
-	{
-		"repo": "water_share",
-		"name": "water_share"
-	}
-  ]
+  	  "repo": "umr-floodplain",
+  	  "name": "umr-floodplain",
+  	  "org": "FreshwaterNetwork"
+    }
+   ]
 }
