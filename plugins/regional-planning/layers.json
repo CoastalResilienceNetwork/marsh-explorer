@@ -13,7 +13,20 @@
 			},
 			{
                "name": "Major Rivers of the Mississippi Basin"
+			},
+			{
+				"name": "HUC 6 Basins"
+			},
+			{
+				"name": "HUC 8 Subbasins"
+			},
+			{
+				"name": "HUC 12 Subwatersheds"
+			},
+			{
+				"name": "U.S. States"
 			}
+
 		]
 	}
 ]
