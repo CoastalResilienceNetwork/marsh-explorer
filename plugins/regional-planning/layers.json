@@ -9,9 +9,7 @@
         },
         "includeLayers": [
             {
-                "name": "America's Great River Map Layers",
-				"description":"Base data such as town & county boundaries, parcels and roads.",
-				"includeAllLayers": true
+               
 			}
 		]
 	}
