@@ -9,10 +9,10 @@
         },
         "includeLayers": [
             {
-               "id": 0
+               "name": "Mississippi River Basin"
 			},
 			{
-               "id": 1
+               "name": "Major Rivers of the Mississippi Basin"
 			}
 		]
 	}
