@@ -1,41 +1,16 @@
 [
     {
-        "displayName": "Virginia",
+        "displayName": "America's Great River Project",
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Virginia",
-            "name": "Virginia"
+            "url": "http://cirrus-web-adapter-241060755.us-west-1.elb.amazonaws.com/arcgis/rest/services/FN_AGR",
+            "name": "America's Great River Project"
         },
         "includeLayers": [
             {
-                "name": "Base Data",
+                "name": "AGR_Map_Layers",
 				"description":"Base data such as town & county boundaries, parcels and roads.",
-				"includeAllLayers": true
-			},
-			{
-                "name": "Infrastructure",
-				"description":"Infrastructure data such as schools, fire and rescue stations and data from a road vulnerability study.",
-				"includeAllLayers": true
-			},
-			{
-                "name": "Coastal Management",
-				"description":"Coastal management data such as access sites, flood zones and protected lands.",
-				"includeAllLayers": true
-			},
-			{
-                "name": "Habitats",
-				"description":"Habitat data including aquaculture sites, public oyster grounds, marshes and SAV beds.",
-				"includeAllLayers": true
-			},
-			{
-                "name": "Physical Features",
-				"description":"Physical features including soils, wetlands, land cover and elevation.",
-				"includeAllLayers": true
-			},
-			{
-                "name": "Social and Economic",
-				"description":"Various population data from the U.S. Census Bureau.",
 				"includeAllLayers": true
 			}
 		]
