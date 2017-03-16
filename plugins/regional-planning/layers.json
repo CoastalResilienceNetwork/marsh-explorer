@@ -1,0 +1,43 @@
+[
+    {
+        "displayName": "Virginia",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Virginia",
+            "name": "Virginia"
+        },
+        "includeLayers": [
+            {
+                "name": "Base Data",
+				"description":"Base data such as town & county boundaries, parcels and roads.",
+				"includeAllLayers": true
+			},
+			{
+                "name": "Infrastructure",
+				"description":"Infrastructure data such as schools, fire and rescue stations and data from a road vulnerability study.",
+				"includeAllLayers": true
+			},
+			{
+                "name": "Coastal Management",
+				"description":"Coastal management data such as access sites, flood zones and protected lands.",
+				"includeAllLayers": true
+			},
+			{
+                "name": "Habitats",
+				"description":"Habitat data including aquaculture sites, public oyster grounds, marshes and SAV beds.",
+				"includeAllLayers": true
+			},
+			{
+                "name": "Physical Features",
+				"description":"Physical features including soils, wetlands, land cover and elevation.",
+				"includeAllLayers": true
+			},
+			{
+                "name": "Social and Economic",
+				"description":"Various population data from the U.S. Census Bureau.",
+				"includeAllLayers": true
+			}
+		]
+	}
+]
