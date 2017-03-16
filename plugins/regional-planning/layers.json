@@ -5,11 +5,11 @@
             "type": "ags",
             "layerType": "dynamic",
             "url": "http://cirrus-web-adapter-241060755.us-west-1.elb.amazonaws.com/arcgis/rest/services/FN_AGR",
-            "name": "America's Great River Project"
+            "name": "AGR_Map_Layers"
         },
         "includeLayers": [
             {
-                "name": "AGR_Map_Layers",
+                "name": "America's Great River Map Layers",
 				"description":"Base data such as town & county boundaries, parcels and roads.",
 				"includeAllLayers": true
 			}
