@@ -48,8 +48,8 @@
     ],
     "print": {
         "printServerUrl": "http://cirrus-web-adapter-241060755.us-west-1.elb.amazonaws.com/arcgis/rest/services/FN_Louisiana/ExportWebMap/GPServer/Export%20Web%20Map",
-		"customPrintTemplatePrefix": "Letter ANSI A GeositeFramework",
-		"headerLogoPath": "http://maps.coastalresilience.org/network/img/TNCLogoPrimary_RGB2.jpg"
+	"customPrintTemplatePrefix": "Letter ANSI A GeositeFramework",
+	"headerLogoPath": "http://maps.coastalresilience.org/network/img/TNCLogoPrimary_RGB2.jpg"
     },
     "colors": {
        "primary": "#2F6384",
@@ -57,7 +57,7 @@
        "primary": "#457545",
         "secondary": "#81b94d",
     },
-    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
+   "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "launchpad": {
             "title": "",
             "description": "<p>Welcome to The Mississippi River Basin Project. There's lots of cool stuff to check out here.</p>",
