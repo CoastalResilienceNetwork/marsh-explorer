@@ -1,7 +1,7 @@
 {
     "googleAnalyticsPropertyId": "7401895-38",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
-    "titleMain": { "text": "Mississippi River Basin Project", "url": "http://coastalresilience.org/" },
+    "titleMain": { "text": "America's Great River", "url": "http://coastalresilience.org/" },
     "titleDetail": { "text": "", "url": "http://coastalresilience.org/geographies/new-york-and-connecticut" },
 	"headerLinks": [
 		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
@@ -13,10 +13,17 @@
         { "text": "Legal Disclosure", "url": "http://coastalresilience.org/terms-of-use/" }
     ],
     "regionLinks": [
-            { "text": "Louisiana", "url": "http://maps.freshwaternetwork.org/louisiana/" },
-            { "text": "Mississippi", "url": "http://maps.freshwaternetwork.org/mississippi/" },
-            { "text": "Northeast Region", "url": "http://maps.freshwaternetwork.org/northeast/" },
-            { "text": "Alabama Demo", "url": "http://maps.freshwaternetwork.org/alabama-demo/" }
+            { "text": "California", "url": "http://maps.coastalresilience.org/california" },
+            { "text": "Connecticut", "url": "http://maps.coastalresilience.org/connecticut" },
+            { "text": "Global", "url": "http://maps.coastalresilience.org/global/" },
+            { "text": "Gulf of Mexico", "url": "http://maps.coastalresilience.org/gulfmex/" },
+            { "text": "Grenada, St. Vincent & the Grenadines", "url": "http://maps.coastalresilience.org/gsvg/" },
+            { "text": "MesoAmerican Reef", "url": "http://maps.coastalresilience.org/mar/" },
+            { "text": "New Jersey", "url": "http://maps.coastalresilience.org/newjersey" },
+            { "text": "Southeast Florida", "url": "http://maps.coastalresilience.org/seflorida/" },
+            { "text": "United States", "url": "http://maps.coastalresilience.org/unitedstates/" },
+            { "text": "U.S. Virgin Islands", "url": "http://maps.coastalresilience.org/usvi/" },
+            { "text": "Washington", "url": "http://maps.coastalresilience.org/pugetsound" }
     ],
     "initialExtent": [
         -102.00,
@@ -47,7 +54,7 @@
 		"water_share"
     ],
     "print": {
-        "printServerUrl": "http://cirrus-web-adapter-241060755.us-west-1.elb.amazonaws.com/arcgis/rest/services/FN_Louisiana/ExportWebMap/GPServer/Export%20Web%20Map",
+        "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
 	"customPrintTemplatePrefix": "Letter ANSI A GeositeFramework",
 	"headerLogoPath": "http://maps.coastalresilience.org/network/img/TNCLogoPrimary_RGB2.jpg"
     },
@@ -60,7 +67,7 @@
    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "launchpad": {
             "title": "",
-            "description": "<p>Welcome to The Mississippi River Basin Project. There's lots of cool stuff to check out here.</p>",
+            "description": "<p>Welcome to America's Great River region. There's lots of cool stuff to check out here.</p>",
             "plugins": [
 				{
 					"title": "UMR Floodplain Explorer",
