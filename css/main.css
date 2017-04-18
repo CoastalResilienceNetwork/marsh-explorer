@@ -1,0 +1,18 @@
+.flex-wrap{
+	display:flex;
+}
+.att-div{
+	width:100px; margin:3px; border:1pt solid #cdd5d5; padding:5px; box-shadow:0 1px 1px rgba(16,22,26,.2); position:relative;
+}
+.sum-att{
+	color:#2F6384; font-size:24px; font-weight:bold; text-align:center;
+}
+.sum-att-label{
+	font-size:10px; text-align:center; margin:-5px 0 5px 0;
+}
+.sum-label{
+	font-weight:bold; text-align:center;
+}
+.country-wrap{
+	margin-left:8px;
+}
