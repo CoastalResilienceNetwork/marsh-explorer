@@ -27,8 +27,9 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 						t.obj.stateSet = "no";
 					}	
 				});		
+				// get data table
 				var q = new Query();
-				var qt = new QueryTask(t.url + "/" + t.ncsGlobalCountries);
+				var qt = new QueryTask(t.url + "/" + t.countries);
 				q.where = "OBJECTID > 0";
 				q.returnGeometry = false;
 				q.outFields = ["*"];
@@ -46,6 +47,23 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 					})	
 					$('#' + t.id + 'selectCountry').trigger("chosen:updated");		
 				});
+				// handle map clicks
+				t.map.setMapCursor("pointer")
+				t.map.on('click',function(c){
+					if (t.open == "yes"){
+						var pnt = c.mapPoint;
+						var q1 = new Query();
+						var qt1 = new QueryTask(t.url + "/" + t.countries);
+						q1.geometry = pnt;
+						q1.outFields = ["OBJECTID"];
+						qt1.execute(q1, function(e){
+							if (e.features.length > 0){
+								var obid = e.features[0].attributes.OBJECTID;
+								$("#" + t.id + "selectCountry").val(obid).trigger("chosen:updated").trigger("change");						
+							}	
+						})	
+					}
+				})
 			}				
 		});
     }
