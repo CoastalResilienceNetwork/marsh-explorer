@@ -4,30 +4,30 @@ takes the ContentPane id and prepends it to every element with a declared id in 
 The unique ContentPane id makes all the element ids unique and prevents duplicate id errors across other apps.-->
 
 <h3>Climate Mitigation Provided by Natural Systems</h3>
-<section>
+<section id="top-wrap" >
 	<div class="flex-wrap">
-		<div class="att-div">
-			<div class="sum-att">XX</div>
+		<div class="chosen-wrap" style="margin-bottom:10px; margin-left:3px;">
+			<select data-placeholder="Select a Country" id="selectCountry" class="chosen">
+				<option></option>
+			</select>
+		</div>
+		<div class="c-sel dl-wrap">
+			<button class="button button-primary">Get Country Summary</button>
+		</div>	
+	</div>
+	<div class="flex-wrap">	
+		<div class="att-div c-sel">
+			<div id="tot_emiss_2013" class="sum-att">XX</div>
 			<div class="sum-att-label">Mt CO2e</div> 
 			<div class="sum-label">Current Annual Emissions</div>
 		</div>
-		<div class="att-div">
-			<div class="sum-att">XX</div>
+		<div class="att-div c-sel">
+			<div id="nscMitPoten" class="sum-att">XX</div>
 			<div class="sum-att-label">Mt CO2e</div>
 			<div class="sum-label">NSC Mitigation Potential</div> 
 		</div>
-		<div class="country-wrap">
-			<div class="chosen-wrap" style="margin-bottom:10px;">
-				<select data-placeholder="Select a Country" id="selectCountry" class="chosen">
-					<option></option>
-					<option value="one">One</option>
-					<option value="two">Two</option>
-					<option value="three">Three</option>
-					<option value="four">Four</option>
-					<option value="five">Five</option>
-				</select>
-			</div>
-			<button class="button button-primary" style="margin-left:4px;">Get Country Summary</button>
-		</div>
 	</div>
+</section>
+<section>
+	<h4>Mitigation Potential by Pathway</h4>
 </section>
