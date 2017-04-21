@@ -5,7 +5,7 @@
 	width:182px; margin:3px; border:1pt solid #cdd5d5; padding:5px; box-shadow:0 1px 1px rgba(16,22,26,.2); position:relative;
 }
 .sum-att{
-	color:#2F6384; font-size:24px; font-weight:bold; text-align:center;
+	color:#623C25; font-size:24px; font-weight:bold; text-align:center;
 }
 .sum-att-label{
 	font-size:10px; text-align:center; margin:-5px 0 5px 0;
@@ -26,7 +26,7 @@
 	width:52px; display:flex; flex-direction:column; height:248px; margin-top:14px; text-align:right;
 }
 .pathway-label{
-	flex:1; color:#2F6384; font-weight:bold;
+	flex:1; color:#623C25; font-weight:bold;
 }
 .pathway-units{
 	position:absolute; top:-5px; left:2px; font-size:11px; font-weight:bold;
@@ -47,7 +47,7 @@
 	flex:1; 
 }
 .p-a{
-	 /*color:#2F6384;*/ color: #8c2130; font-weight:bold; font-size:14px;
+	 /*color:#2F6384;*/ color:#623C25; font-weight:bold; font-size:14px;
 }
 .commitment-wrap{
 	width:300px; margin-top:2rem;
