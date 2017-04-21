@@ -29,15 +29,20 @@ function ( declare, Query, QueryTask ) {
 									var y = 0;
 									t.pwArray = [];
 									t.lblArray = [];
+									$("#" + t.id + " .p-a").hide();
 									$.each(t.mitPoten,function(i1,v1){
 										t.lblArray.push(v[v1]);
 										if(v[v1] != -99){
+											if (v[v1] > 40){
+												$("#" + t.id + " .p-a:eq(" + i1 +")").show();
+											}
 											t.pwArray.push(v[v1]);
 											y = y + Number(v[v1]);
 										}else{
 											t.pwArray.push(0);
 										}
 									})	
+									t.parisBar = v.ref_yr_emiss;
 									t.chartjs.updateChart(t);
 									y = t.clicks.roundTo(y, 4)
 									y = t.clicks.commaSeparateNumber(y)
@@ -55,7 +60,7 @@ function ( declare, Query, QueryTask ) {
 				t.countries = 1;
 				t.layerDefs = [];
 				t.atts = [];
-				t.mitPoten = ["mangroveMax","peat_lossMax","legumesMax","optintMax","riceMax","natforMax","peat_resMax","reforMax"]
+				t.mitPoten = ["mangrove_max","peat_loss_max","legumes_max","optint_max","rice_max","natfor_max","peat_res_max","refor_max"]
 			},
 			commaSeparateNumber: function(val){
 				while (/(\d+)(\d{3})/.test(val.toString())){

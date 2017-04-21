@@ -10,8 +10,9 @@ function ( declare, on, dom, Chart ) {
 				Chart.defaults.global.tooltips.enabled = false;
 				Chart.defaults.global.legend.display = false;
 				
+				// mitigation pathways chart
 				var ctx = $("#" + t.id + "pathwayChart");
-				t.myChart = new Chart(ctx, {
+				t.mitPathChart = new Chart(ctx, {
 				    type: 'horizontalBar',
 				    data: {
 				        labels: ["", "", "", "", "", "", "", ""],
@@ -28,10 +29,47 @@ function ( declare, on, dom, Chart ) {
 				        }
 				    }
 				});
+				// Commitment chart
+				var ctx1 = $("#" + t.id + "commitmentChart");
+				var data = {
+				  labels: ["", ""],
+				  datasets: [{
+				      backgroundColor: "#8fb440",
+				      borderColor: "#8fb440",
+				      data: [0,40]
+				    }, {
+				      backgroundColor: "#408CB4",
+				      borderColor: "#408CB4",
+				      data: [0,60]
+				    }, {
+				      backgroundColor: "#A14612",
+				      borderColor: "#A14612",
+				      data: [85,0]
+				    }]
+				};
+
+				t.mitParis = new Chart(ctx1, {
+				  type: 'bar',
+				  data: data,
+				  options: {
+				    scales: {
+				  		xAxes: [{stacked: true}],
+				    	yAxes: [{
+				      	stacked: true,
+				      	ticks: {
+				        	beginAtZero: true 
+				         }
+				      }]
+				    }
+				  }
+				});
+
 			},
 			updateChart: function(t){
-				t.myChart.data.datasets[0].data = t.pwArray;
-				t.myChart.update();
+				console.log(t.mitParis.data.datasets)
+				t.mitParis.data.datasets[2].data = [t.parisBar,0];
+				t.mitPathChart.data.datasets[0].data = t.pwArray;
+				t.mitPathChart.update();
 				$("#" + t.id + " .pathway-label").each(function(i,v){
 					if (t.lblArray[i] == -99){
 						$(v).html("N/A")

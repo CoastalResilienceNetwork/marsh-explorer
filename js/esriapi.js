@@ -60,6 +60,10 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 							if (e.features.length > 0){
 								var obid = e.features[0].attributes.OBJECTID;
 								$("#" + t.id + "selectCountry").val(obid).trigger("chosen:updated").trigger("change");						
+							}else{
+								t.obj.visibleLayers = [t.countries];
+								t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+								$("#" + t.id + "selectCountry").val("").trigger("chosen:updated").trigger("change");	
 							}	
 						})	
 					}

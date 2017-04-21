@@ -37,3 +37,33 @@
 .pathway-name{
 	flex:1;
 }
+.pathway-arrow-wrap{
+	display:flex; flex-direction:column; height:248px; position:absolute; top:12px; left:372px;	
+}
+.pathway-name{
+	flex:1;
+}
+.pathway-arrow{
+	flex:1; 
+}
+.p-a{
+	 /*color:#2F6384;*/ color: #8c2130; font-weight:bold; font-size:14px;
+}
+.commitment-wrap{
+	width:300px; margin-top:2rem;
+}
+.lgnd-box{
+	height:20px; width:24px; margin:8px 8px 0 8px;
+}
+.mp-box{
+	background:#408CB4; box-shadow:0 1px 1px rgba(16,22,26,.2);
+}
+.dg-box{
+	background:#8fb440; box-shadow:0 1px 1px rgba(16,22,26,.2);
+}
+.lgnd-text{
+	font-size:11px;
+}
+.lgnd-wrap{
+	margin-top:42px; margin-left:4px;
+}
