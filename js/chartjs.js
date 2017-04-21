@@ -66,8 +66,14 @@ function ( declare, on, dom, Chart ) {
 
 			},
 			updateChart: function(t){
-				console.log(t.mitParis.data.datasets)
+				var max = 0;
+				$.each(t.pwArray,function(i,v){
+					max = max + v;
+				})
+				t.mitParis.data.datasets[1].data = [0,t.twoDeg];
+				t.mitParis.data.datasets[1].data = [0,max];
 				t.mitParis.data.datasets[2].data = [t.parisBar,0];
+				t.mitParis.update();
 				t.mitPathChart.data.datasets[0].data = t.pwArray;
 				t.mitPathChart.update();
 				$("#" + t.id + " .pathway-label").each(function(i,v){

@@ -30,7 +30,7 @@ function ( declare, Query, QueryTask ) {
 									t.pwArray = [];
 									t.lblArray = [];
 									$("#" + t.id + " .p-a").hide();
-									$.each(t.mitPoten,function(i1,v1){
+									$.each(t.maxArray,function(i1,v1){
 										t.lblArray.push(v[v1]);
 										if(v[v1] != -99){
 											if (v[v1] > 40){
@@ -41,8 +41,18 @@ function ( declare, Query, QueryTask ) {
 										}else{
 											t.pwArray.push(0);
 										}
+									})
+									t.twoDeg = 0;
+									$.each(t.degArray,function(i1,v1){
+										if(v[v1] != -99){
+											t.twoDeg = t.twoDeg + v[v1];
+										}
 									})	
-									t.parisBar = v.ref_yr_emiss;
+									if (v.ref_yr_emiss == -99){
+										t.parisBar = 0;	
+									}else{
+										t.parisBar = v.ref_yr_emiss;
+									}
 									t.chartjs.updateChart(t);
 									y = t.clicks.roundTo(y, 4)
 									y = t.clicks.commaSeparateNumber(y)
@@ -60,7 +70,8 @@ function ( declare, Query, QueryTask ) {
 				t.countries = 1;
 				t.layerDefs = [];
 				t.atts = [];
-				t.mitPoten = ["mangrove_max","peat_loss_max","legumes_max","optint_max","rice_max","natfor_max","peat_res_max","refor_max"]
+				t.maxArray = ["mangrove_max","peat_loss_max","legumes_max","optint_max","rice_max","natfor_max","peat_res_max","refor_max"];
+				t.degArray = ["mangrove_2deg","peat_loss_2deg","legumes_2deg","optint_2deg","rice_2deg","natfor_2deg","peat_res_2deg","refor_2deg"];
 			},
 			commaSeparateNumber: function(val){
 				while (/(\d+)(\d{3})/.test(val.toString())){

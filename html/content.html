@@ -4,7 +4,7 @@ takes the ContentPane id and prepends it to every element with a declared id in 
 The unique ContentPane id makes all the element ids unique and prevents duplicate id errors across other apps.-->
 
 <section id="top-wrap" >
-	<h3>Climate Mitigation Provided by Natural Systems</h3>
+	<h3 style="margin-top:10px;">Climate Mitigation Provided by Natural Systems</h3>
 	<div class="flex-wrap">
 		<div class="chosen-wrap" style="margin-bottom:10px; margin-left:3px;">
 			<select data-placeholder="Select a Country" id="selectCountry" class="chosen">
@@ -30,7 +30,7 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 </section>
 <section class="c-sel">
 	<h3>Mitigation Potential by Pathway</h3>
-	<div style="position:relative;">
+	<div style="position:relative; margin-top:16px">
 		<div class="pathway-name-wrap">
 			<div class="pathway-name">Avoided Mangrove Impacts</div>
 			<div class="pathway-name">Avoided Peat Impacts</div>
@@ -69,8 +69,9 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 		</div>
 	</div>		
 </section>
-<section class="hide">
-	<div style="position:relative; margin-top:2rem; display:flex;">
+<section class="c-sel">
+	<h3>Natural Systems Contribution to Paris Commitment</h3>
+	<div style="position:relative; display:flex; margin-top:-16px;">
 		<div class='commitment-wrap'>	
 			<canvas id="commitmentChart" height="150px"></canvas>
 		</div>
@@ -84,6 +85,10 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 				<div class="lgnd-text">2 Degree Ambition</div>
 			</div>
 		</div>
+	</div>
+	<div class="lbl-wrap">
+		<div>Total Commitment</div>
+		<div style="text-align:right; flex:1;">Natural Systems</div>
 	</div>	
-	<p>Proportion of climate mitigation provided by natural systems and agriculture management compared to the total Paris Agreement mitigation commitment</p>
+	<p style="margin-left:10px; font-size:12px;">Proportion of climate mitigation provided by natural systems and agriculture management compared to the total Paris Agreement mitigation commitment</p>
 </section>

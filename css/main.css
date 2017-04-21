@@ -47,7 +47,7 @@
 	flex:1; 
 }
 .p-a{
-	 /*color:#2F6384;*/ color:#623C25; font-weight:bold; font-size:14px;
+	color:#623C25; font-weight:bold; font-size:14px;
 }
 .commitment-wrap{
 	width:300px; margin-top:2rem;
@@ -67,6 +67,6 @@
 .lgnd-wrap{
 	margin-top:42px; margin-left:4px;
 }
-.hide{
-	display:none;
+.lbl-wrap{
+	display:flex; font-size:11px; margin:-25px 0px 6px 50px; width:220px;
 }
