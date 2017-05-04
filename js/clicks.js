@@ -27,19 +27,27 @@ function ( declare, Query, QueryTask ) {
 									}
 									$("#" + t.id + "tot_emiss_2013").html(x)
 									var y = 0;
-									t.pwArray = [];
+									t.highVals = [];
+									t.maxVals = [];
 									t.lblArray = [];
 									$("#" + t.id + " .p-a").hide();
+									$.each(t.highArray,function(i1,v1){
+										if(v[v1] != -99){
+											t.highVals.push(v[v1]);
+										}else{
+											t.highVals.push(0);
+										}
+									})
 									$.each(t.maxArray,function(i1,v1){
 										t.lblArray.push(v[v1]);
 										if(v[v1] != -99){
 											if (v[v1] > 40){
 												$("#" + t.id + " .p-a:eq(" + i1 +")").show();
 											}
-											t.pwArray.push(v[v1]);
+											t.maxVals.push(v[v1]);
 											y = y + Number(v[v1]);
 										}else{
-											t.pwArray.push(0);
+											t.maxVals.push(0);
 										}
 									})
 									t.twoDeg = 0;
@@ -70,6 +78,7 @@ function ( declare, Query, QueryTask ) {
 				t.countries = 1;
 				t.layerDefs = [];
 				t.atts = [];
+				t.highArray = ["mangrove_high","peat_loss_high","legumes_high","optint_high","rice_high","natfor_high","peat_res_high","refor_high"];
 				t.maxArray = ["mangrove_max","peat_loss_max","legumes_max","optint_max","rice_max","natfor_max","peat_res_max","refor_max"];
 				t.degArray = ["mangrove_2deg","peat_loss_2deg","legumes_2deg","optint_2deg","rice_2deg","natfor_2deg","peat_res_2deg","refor_2deg"];
 			},

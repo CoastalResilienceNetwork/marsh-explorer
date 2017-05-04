@@ -67,14 +67,19 @@ function ( declare, on, dom, Chart ) {
 			},
 			updateChart: function(t){
 				var max = 0;
-				$.each(t.pwArray,function(i,v){
+				$.each(t.maxVals,function(i,v){
 					max = max + v;
 				})
-				t.mitParis.data.datasets[1].data = [0,t.twoDeg];
+				var high = 0;
+				$.each(t.highVals,function(i,v){
+					high = high + v;
+				})
+				console.log(high,max)
+				t.mitParis.data.datasets[1].data = [0,high];
 				t.mitParis.data.datasets[1].data = [0,max];
 				t.mitParis.data.datasets[2].data = [t.parisBar,0];
 				t.mitParis.update();
-				t.mitPathChart.data.datasets[0].data = t.pwArray;
+				t.mitPathChart.data.datasets[0].data = t.maxVals;
 				t.mitPathChart.update();
 				$("#" + t.id + " .pathway-label").each(function(i,v){
 					if (t.lblArray[i] == -99){
