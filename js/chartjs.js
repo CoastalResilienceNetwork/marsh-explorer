@@ -74,8 +74,8 @@ function ( declare, on, dom, Chart ) {
 				$.each(t.highVals,function(i,v){
 					high = high + v;
 				})
-				console.log(high,max)
-				t.mitParis.data.datasets[1].data = [0,high];
+				console.log("High: " + high,"Max: " + max)
+				t.mitParis.data.datasets[0].data = [0,high];
 				t.mitParis.data.datasets[1].data = [0,max];
 				t.mitParis.data.datasets[2].data = [t.parisBar,0];
 				t.mitParis.update();
