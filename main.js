@@ -26,6 +26,7 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 		hibernate: function () {
 			if (this.appDiv != undefined){
 				this.dynamicLayer.setVisibleLayers([-1])
+				this.dynamicLayer1.setVisibleLayers([-1])
 			}
 			this.open = "no";
 		},
@@ -37,6 +38,7 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 				$(this.printButton).hide();
 			}else{
 				this.dynamicLayer.setVisibleLayers(this.obj.visibleLayers);
+				this.dynamicLayer1.setVisibleLayers(this.obj.visibleLayers1);
 				$('#' + this.id).parent().parent().css('display', 'flex');
 			}
 			this.open = "yes";

@@ -13,12 +13,14 @@ function ( declare, Query, QueryTask ) {
 						if (val.length == 0){
 							$("#" + t.id + " .c-sel").slideUp();
 							t.obj.visibleLayers = [t.countries];
+							t.obj.visibleLayers1 = [-1];
 						}else{
 							t.layerDefs[t.selectedCountry] = "OBJECTID = " + val;
 							t.layerDefs1[t.selectedCountryFill] = "OBJECTID = " + val;
 							t.dynamicLayer.setLayerDefinitions(t.layerDefs);
 							t.dynamicLayer1.setLayerDefinitions(t.layerDefs1);
 							t.obj.visibleLayers = [t.selectedCountry, t.countries];
+							t.obj.visibleLayers1 = [t.selectedCountryFill];
 							$.each(t.atts,function(i,v){
 								if(val == v.OBJECTID){
 									var x = v.tot_emiss_2013
@@ -81,7 +83,7 @@ function ( declare, Query, QueryTask ) {
 							t.querySource = "menu";
 						}
 						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers)
-						t.dynamicLayer1.setVisibleLayers([t.selectedCountryFill])
+						t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1)
 					});
 			},
 
