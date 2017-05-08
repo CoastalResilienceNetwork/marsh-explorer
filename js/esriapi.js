@@ -19,7 +19,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				t.dynamicLayer.on("load", function () { 			
 					t.layersArray = t.dynamicLayer.layerInfos;
 					if (t.obj.stateSet == "no"){
-						t.map.setExtent(t.dynamicLayer.fullExtent.expand(0.8), true)
+						t.map.setZoom(2);
 					}
 					// Save and Share Handler					
 					if (t.obj.stateSet == "yes"){

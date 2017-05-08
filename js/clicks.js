@@ -73,7 +73,6 @@ function ( declare, Query, QueryTask ) {
 							})
 							$("#" + t.id + " .c-sel").slideDown();
 							if (t.querySource == "menu"){
-								console.log($("#" + t.id + "selectCountry option:selected").text())
 								var c = $("#" + t.id + "selectCountry option:selected").text();
 								var q = new Query();
 								var qt = new QueryTask(t.url + "/" + t.countriesPoint);
