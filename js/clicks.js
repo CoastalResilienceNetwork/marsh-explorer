@@ -80,7 +80,7 @@ function ( declare, Query, QueryTask ) {
 								q.where = "country ='" + c + "'";
 								q.returnGeometry = true;
 								qt.execute(q, function(e){
-									t.map.centerAndZoom(e.features[0].geometry,2)
+									t.map.centerAndZoom(e.features[0].geometry,4)
 								});	
 							}	
 							t.querySource = "menu";
