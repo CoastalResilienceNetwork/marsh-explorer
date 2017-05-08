@@ -11,8 +11,8 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				// Add dynamic map service
 				t.dynamicLayer = new ArcGISDynamicMapServiceLayer(t.url);
 				t.dynamicLayer1 = new ArcGISDynamicMapServiceLayer(t.url, {opacity:0.5});
-				t.map.addLayer(t.dynamicLayer);
 				t.map.addLayer(t.dynamicLayer1);
+				t.map.addLayer(t.dynamicLayer);
 				if (t.obj.visibleLayers.length > 0){	
 					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 				}

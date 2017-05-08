@@ -73,14 +73,14 @@ function ( declare, Query, QueryTask ) {
 							})
 							$("#" + t.id + " .c-sel").slideDown();
 							if (t.querySource == "menu"){
+								console.log($("#" + t.id + "selectCountry option:selected").text())
+								var c = $("#" + t.id + "selectCountry option:selected").text();
 								var q = new Query();
-								var qt = new QueryTask(t.url + "/" + t.countries);
-								q.where = "OBJECTID =" + val;
-								qt.executeForExtent(q, function(e){
-									t.map.setExtent(e.extent,true);
-									setTimeout(function (){
-										t.map.setZoom(2);		
-									}, 500); 
+								var qt = new QueryTask(t.url + "/" + t.countriesPoint);
+								q.where = "country ='" + c + "'";
+								q.returnGeometry = true;
+								qt.execute(q, function(e){
+									t.map.centerAndZoom(e.features[0].geometry,2)
 								});	
 							}	
 							t.querySource = "menu";
@@ -96,6 +96,7 @@ function ( declare, Query, QueryTask ) {
 				t.selectedCountryFill = 1;
 				t.countries = 2;
 				t.countriesAfterFirstSel = 3;
+				t.countriesPoint = 4;
 				t.layerDefs = [];
 				t.layerDefs1 = [];
 				t.atts = [];
