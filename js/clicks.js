@@ -78,6 +78,9 @@ function ( declare, Query, QueryTask ) {
 								q.where = "OBJECTID =" + val;
 								qt.executeForExtent(q, function(e){
 									t.map.setExtent(e.extent,true);
+									setTimeout(function (){
+										t.map.setZoom(2);		
+									}, 500); 
 								});	
 							}	
 							t.querySource = "menu";
