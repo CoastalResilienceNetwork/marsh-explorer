@@ -10,14 +10,16 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 			esriApiFunctions: function(t){	
 				// Add dynamic map service
 				t.dynamicLayer = new ArcGISDynamicMapServiceLayer(t.url);
+				t.dynamicLayer1 = new ArcGISDynamicMapServiceLayer(t.url, {opacity:0.5});
 				t.map.addLayer(t.dynamicLayer);
+				t.map.addLayer(t.dynamicLayer1);
 				if (t.obj.visibleLayers.length > 0){	
 					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 				}
 				t.dynamicLayer.on("load", function () { 			
 					t.layersArray = t.dynamicLayer.layerInfos;
 					if (t.obj.stateSet == "no"){
-						t.map.setExtent(t.dynamicLayer.fullExtent.expand(0.6), true)
+						t.map.setExtent(t.dynamicLayer.fullExtent.expand(0.8), true)
 					}
 					// Save and Share Handler					
 					if (t.obj.stateSet == "yes"){
@@ -51,6 +53,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				t.map.setMapCursor("pointer")
 				t.map.on('click',function(c){
 					if (t.open == "yes"){
+						t.querySource = "map";
 						var pnt = c.mapPoint;
 						var q1 = new Query();
 						var qt1 = new QueryTask(t.url + "/" + t.countries);
