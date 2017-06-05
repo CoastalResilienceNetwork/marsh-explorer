@@ -24,17 +24,21 @@ function ( declare, Query, QueryTask ) {
 							$.each(t.atts,function(i,v){
 								if(val == v.OBJECTID){
 									var w = v.emiss_redux_1;
-									if (w){
+									if (w != -99){
 										w = w * 100;
 										w = t.clicks.roundTo(w,0);
+										$("#" + t.id + "emiss_redux_1").html(w + "%" + v.eu)
 									}
 									else{
-										w = "N/A"
+										$("#" + t.id + "emiss_redux_1").html("N/A")
 									}
-									$("#" + t.id + "emiss_redux_1").html(w + "%" + v.eu)
-									$("#" + t.id + "ref_yr_1").html(v.ref_yr_1)
+									var w1 = v.ref_yr_1;
+									if (w1 == -99){
+										w1 = "N/A"
+									}
+									$("#" + t.id + "ref_yr_1").html(w1)
 									var x = v.emiss_cut
-									if (x){
+									if (x != -99){
 										x = t.clicks.roundTo(x,2);
 										x = t.clicks.commaSeparateNumber(x);
 									}else{
