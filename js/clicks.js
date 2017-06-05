@@ -23,13 +23,24 @@ function ( declare, Query, QueryTask ) {
 							t.obj.visibleLayers1 = [t.selectedCountryFill];
 							$.each(t.atts,function(i,v){
 								if(val == v.OBJECTID){
-									var x = v.tot_emiss_2013
+									var w = v.emiss_redux_1;
+									if (w){
+										w = w * 100;
+										w = t.clicks.roundTo(w,0);
+									}
+									else{
+										w = "N/A"
+									}
+									$("#" + t.id + "emiss_redux_1").html(w + "%" + v.eu)
+									$("#" + t.id + "ref_yr_1").html(v.ref_yr_1)
+									var x = v.emiss_cut
 									if (x){
-										x = t.clicks.commaSeparateNumber(x)
+										x = t.clicks.roundTo(x,2);
+										x = t.clicks.commaSeparateNumber(x);
 									}else{
 										x = "N/A"
 									}
-									$("#" + t.id + "tot_emiss_2013").html(x)
+									$("#" + t.id + "emiss_cut").html(x)
 									var y = 0;
 									t.highVals = [];
 									t.maxVals = [];
@@ -38,6 +49,7 @@ function ( declare, Query, QueryTask ) {
 									$.each(t.highArray,function(i1,v1){
 										if(v[v1] != -99){
 											t.highVals.push(v[v1]);
+											y = y + Number(v[v1]);
 										}else{
 											t.highVals.push(0);
 										}
@@ -49,7 +61,6 @@ function ( declare, Query, QueryTask ) {
 												$("#" + t.id + " .p-a:eq(" + i1 +")").show();
 											}
 											t.maxVals.push(v[v1]);
-											y = y + Number(v[v1]);
 										}else{
 											t.maxVals.push(0);
 										}
@@ -60,10 +71,10 @@ function ( declare, Query, QueryTask ) {
 											t.twoDeg = t.twoDeg + v[v1];
 										}
 									})	
-									if (v.ref_yr_emiss == -99){
+									if (v.emiss_cut == -99){
 										t.parisBar = 0;	
 									}else{
-										t.parisBar = v.ref_yr_emiss;
+										t.parisBar = v.emiss_cut;
 									}
 									t.chartjs.updateChart(t);
 									y = t.clicks.roundTo(y, 4)
@@ -99,8 +110,8 @@ function ( declare, Query, QueryTask ) {
 				t.layerDefs = [];
 				t.layerDefs1 = [];
 				t.atts = [];
-				t.highArray = ["mangrove_high","peat_loss_high","legumes_high","optint_high","rice_high","natfor_high","peat_res_high","refor_high"];
-				t.maxArray = ["mangrove_max","peat_loss_max","legumes_max","optint_max","rice_max","natfor_max","peat_res_max","refor_max"];
+				t.highArray = ["defor_high", "wfuel_high", "mangrove_high","peat_loss_high","legumes_high","optint_high","rice_high","natfor_high","peat_res_high","refor_high"];
+				t.maxArray = ["refor_max", "defor_max", "natfor_max", "peat_res_max", "peat_loss_max", "wfuel_max", "mangrove_max", "rice_max", "optint_max", "legumes_max"];
 				t.degArray = ["mangrove_2deg","peat_loss_2deg","legumes_2deg","optint_2deg","rice_2deg","natfor_2deg","peat_res_2deg","refor_2deg"];
 			},
 			commaSeparateNumber: function(val){

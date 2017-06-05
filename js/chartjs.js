@@ -15,10 +15,10 @@ function ( declare, on, dom, Chart ) {
 				t.mitPathChart = new Chart(ctx, {
 				    type: 'horizontalBar',
 				    data: {
-				        labels: ["", "", "", "", "", "", "", ""],
+				        labels: ["", "", "", "", "", "", "", "", "", ""],
 				        datasets: [{
 				            label: '# of Votes',
-				            data: [12, 19, 3, 1400, 8, 3, 7, 9],
+				            data: [12, 19, 3, 1400, 8, 3, 7, 9, 10, 5],
 				            backgroundColor:'rgb(143,204,140)',
 				            borderWidth: 0
 				        }]

@@ -5,13 +5,16 @@
 	display:flex;
 }
 .att-div{
-	width:182px; margin:3px; border:1pt solid #cdd5d5; padding:5px; box-shadow:0 1px 1px rgba(16,22,26,.2); position:relative;
+	width:124px; margin:3px; border:1pt solid #cdd5d5; padding:5px; box-shadow:0 1px 1px rgba(16,22,26,.2); position:relative;
 }
 .sum-att{
 	color:#623C25; font-size:24px; font-weight:bold; text-align:center;
 }
 .sum-att-label{
 	font-size:10px; text-align:center; margin:-5px 0 5px 0;
+}
+.sum-att-label1{
+	font-size:14px; text-align:center; margin:-5px 0 -1px 0;
 }
 .sum-label{
 	font-weight:bold; text-align:center;
@@ -26,7 +29,7 @@
 	width:340px; margin-left:-10px;
 }
 .pathway-label-wrap{
-	width:52px; display:flex; flex-direction:column; height:248px; margin-top:14px; text-align:right;
+	width:52px; display:flex; flex-direction:column; height:260px; margin-top:10px; text-align:right;
 }
 .pathway-label{
 	flex:1; color:#623C25; font-weight:bold;
@@ -35,13 +38,13 @@
 	position:absolute; top:-5px; left:2px; font-size:11px; font-weight:bold;
 }
 .pathway-name-wrap{
-	display:flex; flex-direction:column; height:248px; position:absolute; top:13px; left:68px; 
+	display:flex; flex-direction:column; height:260px; position:absolute; top:10px; left:68px; 
 }
 .pathway-name{
 	flex:1;
 }
 .pathway-arrow-wrap{
-	display:flex; flex-direction:column; height:248px; position:absolute; top:12px; left:372px;	
+	display:flex; flex-direction:column; height:260px; position:absolute; top:8px; left:372px;	
 }
 .pathway-name{
 	flex:1;

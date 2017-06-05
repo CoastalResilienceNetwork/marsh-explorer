@@ -12,14 +12,19 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 			</select>
 		</div>
 		<div class="c-sel dl-wrap">
-			<button class="button button-default">Country Summary</button>
+			<button class="button button-default">Country Report</button>
 		</div>	
 	</div>
 	<div class="flex-wrap">	
 		<div class="att-div c-sel">
-			<div id="tot_emiss_2013" class="sum-att">XX</div>
+			<div id="emiss_redux_1" class="sum-att">XX</div>
+			<div id="ref_yr_1" class="sum-att-label1">Mt CO2e</div> 
+			<div class="sum-label">NDC Reduction Target</div>
+		</div>
+		<div class="att-div c-sel">
+			<div id="emiss_cut" class="sum-att">XX</div>
 			<div class="sum-att-label">Mt CO2e</div> 
-			<div class="sum-label">Current Annual Emissions</div>
+			<div class="sum-label">Emissions Reduction</div>
 		</div>
 		<div class="att-div c-sel">
 			<div id="nscMitPoten" class="sum-att">XX</div>
@@ -29,19 +34,23 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 	</div>
 </section>
 <section class="c-sel">
-	<h3>Mitigation Potential by Pathway</h3>
+	<h3>Pathway Mitigation Potential</h3>
 	<div style="position:relative; margin-top:16px">
 		<div class="pathway-name-wrap">
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#coastal-wetlands" target="_blank">Avoided Mangrove Impacts</a></div>
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#peatlands" target="_blank">Avoided Peat Impacts</a></div>
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Grazing-Legumes</a></div>
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Grazing-Optimal Intensity</a></div>
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Improved Rice Management</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#reforestation" target="_blank">Reforestation</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#forest-protection" target="_blank">Avoided Forest Conversion</a></div>
 			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#forest-carbon-solutions" target="_blank">Natural Forest Management</a></div>
 			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#peatlands" target="_blank">Peatland Restoration</a></div>
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#reforestation" target="_blank">Reforestation</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#peatlands" target="_blank">Avoided Peat Impacts</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#forest-carbon-solutions" target="_blank">Avoided Woodfuel Harvest</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#coastal-wetlands" target="_blank">Avoided Coastal Wetland Impacts</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Improved Rice Cultivation</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Grazing-Optimal Intensity</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Grazing-Legumes</a></div>			
 		</div>
 		<div class="pathway-arrow-wrap">
+			<div class="pathway-arrow"><span class="p-a">&rarr;</span></div>
+			<div class="pathway-arrow"><span class="p-a">&rarr;</span></div>
 			<div class="pathway-arrow"><span class="p-a">&rarr;</span></div>
 			<div class="pathway-arrow"><span class="p-a">&rarr;</span></div>
 			<div class="pathway-arrow"><span class="p-a">&rarr;</span></div>
@@ -62,9 +71,11 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 				<div class="pathway-label"></div>
 				<div class="pathway-label"></div>
 				<div class="pathway-label"></div>
+				<div class="pathway-label"></div>
+				<div class="pathway-label"></div>
 			</div>
 			<div class='pathway-wrap'>	
-				<canvas id="pathwayChart" height="250px"></canvas>
+				<canvas id="pathwayChart" height="260px"></canvas>
 			</div>
 		</div>
 	</div>		
