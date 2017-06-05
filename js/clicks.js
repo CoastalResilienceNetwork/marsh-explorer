@@ -6,7 +6,7 @@ function ( declare, Query, QueryTask ) {
 
         return declare(null, {
 			eventListeners: function(t){
-				$("#" + t.id + "selectCountry").chosen({allow_single_deselect:true, width:"220px"})
+				$("#" + t.id + "selectCountry").chosen({allow_single_deselect:true, width:"252px"})
 					.change(function(c){
 						var val = c.target.value;
 						// check for a deselect
