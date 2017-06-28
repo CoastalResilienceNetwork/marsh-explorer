@@ -79,6 +79,15 @@
 .lbl-wrap{
 	display:flex; font-size:11px; margin:-25px 0px 6px 50px; width:220px;
 }
+.sty_infoIcon {
+    margin-bottom:-2px; margin-left:3px; cursor:pointer;
+}
+.mpInfo{
+	display:none; margin-bottom:30px;
+}
+.hideInfo{
+	display:none; color:blue; margin-left:5px; cursor:pointer;
+}
 
 .launchpad-plugin .button{
 	background-color:#95d7ae !important; border: 1px solid #bbb !important;

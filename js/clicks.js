@@ -102,6 +102,16 @@ function ( declare, Query, QueryTask ) {
 						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers)
 						t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1)
 					});
+					$("#" + t.id + "mpInfo").click(function(){
+						$("#" + t.id + "mpInfoText").slideDown();
+						$("#" + t.id + "mpInfo").slideUp();
+						$("#" + t.id + "hideInfo").slideDown();
+					})
+					$("#" + t.id + "hideInfo").click(function(){
+						$("#" + t.id + "mpInfoText").slideUp();
+						$("#" + t.id + "hideInfo").slideUp();
+						$("#" + t.id + "mpInfo").slideDown();	
+					})	
 			},
 
 			makeVariables: function(t){
