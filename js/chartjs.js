@@ -86,7 +86,11 @@ function ( declare, on, dom, Chart ) {
 					}else{
 						var y = t.clicks.roundTo(t.lblArray[i], 4)
 						y = t.clicks.commaSeparateNumber(y)
-						$(v).html(y)
+						if (i == 1 || i == 2 || i == 4 || i == 6 || i == 7 || i == 8 || i == 9){
+							$(v).html('<img src="plugins/ncs-country-dashboard/images/lowCost.png" height="17px" width="17px" style="margin-top:1px; margin-right:2px;">' + y)	
+						}else{
+							$(v).html(y)	
+						}
 					}
 				})
 			}			

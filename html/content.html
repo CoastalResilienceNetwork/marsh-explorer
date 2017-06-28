@@ -4,7 +4,7 @@ takes the ContentPane id and prepends it to every element with a declared id in 
 The unique ContentPane id makes all the element ids unique and prevents duplicate id errors across other apps.-->
 
 <section id="top-wrap" >
-	<h3 style="margin-top:10px;">Mitigation potential for select NCS pathways (beta)</h3>
+	<h3 style="margin-top:10px; font-size:17px;">NDC Targets & NCS Mitigation</h3>
 	<div class="flex-wrap">
 		<div class="chosen-wrap" style="margin-bottom:10px; margin-left:3px;">
 			<select data-placeholder="Select a Country" id="selectCountry" class="chosen">
@@ -18,23 +18,23 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 	<div class="flex-wrap">	
 		<div class="att-div c-sel">
 			<div id="emiss_redux_1" class="sum-att">XX</div>
-			<div id="ref_yr_1" class="sum-att-label1">Mt CO2e</div> 
+			<div id="ref_yr_1" class="sum-att-label1"></div> 
 			<div class="sum-label">NDC Reduction Target</div>
 		</div>
 		<div class="att-div c-sel">
 			<div id="emiss_cut" class="sum-att">XX</div>
-			<div class="sum-att-label">Mt CO2e</div> 
-			<div class="sum-label">Emissions Reduction</div>
+			<div class="sum-att-label">Mt CO<sub>2</sub>e/yr</div> 
+			<div class="sum-label">Commmited Emissions Reductions</div>
 		</div>
 		<div class="att-div c-sel">
 			<div id="nscMitPoten" class="sum-att">XX</div>
-			<div class="sum-att-label">Mt CO2e</div>
+			<div class="sum-att-label">Mt CO<sub>2</sub>e/yr</div>
 			<div class="sum-label">NCS Mitigation Potential</div> 
 		</div>
 	</div>
 </section>
 <section class="c-sel">
-	<h3>Pathway Mitigation Potential</h3>
+	<h3 style="font-size: 14px;">Mitigation Potential for Select Pathways</h3>
 	<div style="position:relative; margin-top:16px">
 		<div class="pathway-name-wrap">
 			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#reforestation" target="_blank">Reforestation</a></div>
@@ -43,10 +43,10 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#peatlands" target="_blank">Peatland Restoration</a></div>
 			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#peatlands" target="_blank">Avoided Peat Impacts</a></div>
 			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#forest-carbon-solutions" target="_blank">Avoided Woodfuel Harvest</a></div>
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#coastal-wetlands" target="_blank">Avoided Coastal Wetland Impacts</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#coastal-wetlands" target="_blank">Avoided Mangrove Impacts</a></div>
 			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Improved Rice Cultivation</a></div>
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Grazing-Optimal Intensity</a></div>
-			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Grazing-Legumes</a></div>			
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Grazing - Optimal Intensity</a></div>
+			<div class="pathway-name"><a href="http://naturalclimatesolutions.org/#agriculture-livestock" target="_blank">Grazing - Legumes</a></div>			
 		</div>
 		<div class="pathway-arrow-wrap">
 			<div class="pathway-arrow"><span class="p-a">&rarr;</span></div>
@@ -60,7 +60,7 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 			<div class="pathway-arrow"><span class="p-a">&rarr;</span></div>
 			<div class="pathway-arrow"><span class="p-a">&rarr;</span></div>
 		</div>
-		<div class="pathway-units">Mt CO2e</div>
+		<div class="pathway-units">Mt CO<sub>2</sub>e/yr</div>
 		<div class="flex-wrap">
 			<div class="pathway-label-wrap">
 				<div class="pathway-label"></div>
@@ -81,12 +81,13 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 	</div>		
 </section>
 <section class="c-sel">
-	<h3>Natural Systems Contribution to Paris Commitment</h3>
-	<div style="position:relative; display:flex; margin-top:-16px;">
+	<h3 style="font-size: 14px;">Natural Systems Contribution to Paris Commitment</h3>
+	<div style="position:relative; display:flex; margin-top:-10px;">
 		<div class='commitment-wrap'>	
 			<canvas id="commitmentChart" height="150px"></canvas>
 		</div>
 		<div class="lgnd-wrap">
+			<div class="pathway-units1">CO<sub>2</sub>e/yr</div>
 			<div style="display:flex">
 				<div class="mp-box lgnd-box"></div>
 				<div class="lgnd-text">Maximum Potential</div>
@@ -101,5 +102,5 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 		<div>Total Commitment</div>
 		<div style="text-align:right; flex:1;">Natural Systems</div>
 	</div>	
-	<p style="margin-left:10px; font-size:12px;">Proportion of climate mitigation provided by natural systems and agriculture management compared to the total Paris Agreement mitigation commitment</p>
+	<p style="margin-left:10px; font-size:12px;">Proportion of climate mitigation provided by natural systems and agriculture management compared to this country’s submitted NDC</p>
 </section>
