@@ -11,7 +11,7 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 	return declare(PluginBase, {
 		// The height and width are set here when an infographic is defined. When the user click Continue it rebuilds the app window with whatever you put in.
 		toolbarName: "Country Dashboard", showServiceLayersInLegend: false, allowIdentifyWhenActive: false, rendered: false, resizable: false,
-		hasCustomPrint: false, size:'custom', width:430, hasHelp:false, 
+		hasCustomPrint: false, size:'custom', width:440, hasHelp:false, 
 		
 		// First function called when the user clicks the pluging icon. 
 		initialize: function (frameworkParameters) {
