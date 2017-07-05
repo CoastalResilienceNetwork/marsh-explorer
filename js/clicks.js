@@ -6,9 +6,23 @@ function ( declare, Query, QueryTask ) {
 
         return declare(null, {
 			eventListeners: function(t){
+				t.country = "";
+				t.reportCountries = ["Australia", "Brazil", "Canada", "China", "Germany", "India", "Indonesia", "Kenya", "Mexico", "United States"]
 				$("#" + t.id + "selectCountry").chosen({allow_single_deselect:true, width:"252px"})
 					.change(function(c){
 						var val = c.target.value;
+						t.country = $("#" + t.id + "selectCountry option:selected").text();
+						var rep = "no";
+						$.each(t.reportCountries, function(i,v){
+							if (t.country == v){
+								rep = "yes";
+							}
+						})
+						if (rep == "yes"){
+							$("#" + t.id + "dl-cr").slideDown();
+						}else{
+							$("#" + t.id + "dl-cr").hide();
+						}
 						// check for a deselect
 						if (val.length == 0){
 							$("#" + t.id + " .c-sel").slideUp();
@@ -102,16 +116,20 @@ function ( declare, Query, QueryTask ) {
 						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers)
 						t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1)
 					});
-					$("#" + t.id + "mpInfo").click(function(){
-						$("#" + t.id + "mpInfoText").slideDown();
-						$("#" + t.id + "mpInfo").slideUp();
-						$("#" + t.id + "hideInfo").slideDown();
-					})
-					$("#" + t.id + "hideInfo").click(function(){
-						$("#" + t.id + "mpInfoText").slideUp();
-						$("#" + t.id + "hideInfo").slideUp();
-						$("#" + t.id + "mpInfo").slideDown();	
-					})	
+				$("#" + t.id + "mpInfo").click(function(){
+					$("#" + t.id + "mpInfoText").slideDown();
+					$("#" + t.id + "mpInfo").slideUp();
+					$("#" + t.id + "hideInfo").slideDown();
+				})
+				$("#" + t.id + "hideInfo").click(function(){
+					$("#" + t.id + "mpInfoText").slideUp();
+					$("#" + t.id + "hideInfo").slideUp();
+					$("#" + t.id + "mpInfo").slideDown();	
+				})	
+				$("#" + t.id + "dl-cr").click(function(){
+					t.country = t.country.replace(/ /g,"+");
+					window.open("https://s3-us-west-1.amazonaws.com/naturalclimatesolutions/" + t.country + "+Report.pdf")
+				});	
 			},
 
 			makeVariables: function(t){
