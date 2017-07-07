@@ -128,7 +128,7 @@ function ( declare, Query, QueryTask ) {
 				})	
 				$("#" + t.id + "dl-cr").click(function(){
 					t.country = t.country.replace(/ /g,"%20");
-					window.open("https://nsttnc.blob.core.windows.net/nst/" + t.country + "%20Report.pdf")
+					window.open("https://nsttnc.blob.core.windows.net/ncs/" + t.country + "%20Report.pdf")
 				});	
 			},
 
