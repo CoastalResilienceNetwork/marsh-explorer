@@ -127,8 +127,8 @@ function ( declare, Query, QueryTask ) {
 					$("#" + t.id + "mpInfo").slideDown();	
 				})	
 				$("#" + t.id + "dl-cr").click(function(){
-					t.country = t.country.replace(/ /g,"+");
-					window.open("https://s3-us-west-1.amazonaws.com/naturalclimatesolutions/" + t.country + "+Report.pdf")
+					t.country = t.country.replace(/ /g,"%20");
+					window.open("https://nsttnc.blob.core.windows.net/nst/" + t.country + "%20Report.pdf")
 				});	
 			},
 

@@ -47,7 +47,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 						var b = v.split(",")[0];
 						$('#' + t.id + 'selectCountry').append("<option value='" + a + "'>"+ b +"</option")
 					})	
-					$('#' + t.id + 'selectCountry').trigger("chosen:updated");		
+					$('#' + t.id + 'selectCountry').trigger("chosen:updated");			
 				});
 				// handle map clicks
 				t.map.setMapCursor("pointer")
