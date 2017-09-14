@@ -10,8 +10,6 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 			esriApiFunctions: function(t){	
 				// Add dynamic map service
 				t.dynamicLayer = new ArcGISDynamicMapServiceLayer(t.url);
-				t.dynamicLayer1 = new ArcGISDynamicMapServiceLayer(t.url, {opacity:0.5});
-				t.map.addLayer(t.dynamicLayer1);
 				t.map.addLayer(t.dynamicLayer);
 				if (t.obj.visibleLayers.length > 0){	
 					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
@@ -31,7 +29,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				});		
 				// get data table
 				var q = new Query();
-				var qt = new QueryTask(t.url + "/" + t.countries);
+				var qt = new QueryTask(t.url + "/0" );
 				q.where = "OBJECTID > 0";
 				q.returnGeometry = false;
 				q.outFields = ["*"];
@@ -39,38 +37,44 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				qt.execute(q, function(e){
 					$.each(e.features, function(i,v){
 						t.atts.push(v.attributes)
-						c.push(v.attributes.country + "," +v.attributes.OBJECTID)
+						c.push(v.attributes.Group_)
 					})
-					var countries = c.sort();
-					$.each(countries,function(i,v){
+					var allCounties = c.sort();
+					var counties = [];
+					$.each(allCounties, function(i, el){
+					    if($.inArray(el, counties) === -1){
+					    	counties.push(el);	
+					    } 
+					});
+					$.each(counties,function(i,v){
 						var a = v.split(",")[1];
 						var b = v.split(",")[0];
-						$('#' + t.id + 'selectCountry').append("<option value='" + a + "'>"+ b +"</option")
+						$('#' + t.id + 'selectCounty').append("<option value='" + a + "'>"+ b +"</option")
 					})	
-					$('#' + t.id + 'selectCountry').trigger("chosen:updated");			
+					$('#' + t.id + 'selectCounty').trigger("chosen:updated");			
 				});
 				// handle map clicks
-				t.map.setMapCursor("pointer")
-				t.map.on('click',function(c){
-					if (t.open == "yes"){
-						t.querySource = "map";
-						var pnt = c.mapPoint;
-						var q1 = new Query();
-						var qt1 = new QueryTask(t.url + "/" + t.countries);
-						q1.geometry = pnt;
-						q1.outFields = ["OBJECTID"];
-						qt1.execute(q1, function(e){
-							if (e.features.length > 0){
-								var obid = e.features[0].attributes.OBJECTID;
-								$("#" + t.id + "selectCountry").val(obid).trigger("chosen:updated").trigger("change");						
-							}else{
-								t.obj.visibleLayers = [t.countries];
-								t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
-								$("#" + t.id + "selectCountry").val("").trigger("chosen:updated").trigger("change");	
-							}	
-						})	
-					}
-				})
+				// t.map.setMapCursor("pointer")
+				// t.map.on('click',function(c){
+				// 	if (t.open == "yes"){
+				// 		t.querySource = "map";
+				// 		var pnt = c.mapPoint;
+				// 		var q1 = new Query();
+				// 		var qt1 = new QueryTask(t.url + "/" + t.countries);
+				// 		q1.geometry = pnt;
+				// 		q1.outFields = ["OBJECTID"];
+				// 		qt1.execute(q1, function(e){
+				// 			if (e.features.length > 0){
+				// 				var obid = e.features[0].attributes.OBJECTID;
+				// 				$("#" + t.id + "selectCounty").val(obid).trigger("chosen:updated").trigger("change");						
+				// 			}else{
+				// 				t.obj.visibleLayers = [t.countries];
+				// 				t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+				// 				$("#" + t.id + "selectCounty").val("").trigger("chosen:updated").trigger("change");	
+				// 			}	
+				// 		})	
+				// 	}
+				// })
 			}				
 		});
     }

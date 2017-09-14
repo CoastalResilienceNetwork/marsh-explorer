@@ -6,130 +6,16 @@ function ( declare, Query, QueryTask ) {
 
         return declare(null, {
 			eventListeners: function(t){
-				t.country = "";
-				t.reportCountries = ["Australia", "Brazil", "Canada", "China", "Germany", "India", "Indonesia", "Kenya", "Mexico", "United States"]
-				$("#" + t.id + "selectCountry").chosen({allow_single_deselect:true, width:"252px"})
+				t.county = "";
+				$("#" + t.id + "selectCounty").chosen({allow_single_deselect:false, width:"252px"})
 					.change(function(c){
 						var val = c.target.value;
-						t.country = $("#" + t.id + "selectCountry option:selected").text();
-						var rep = "no";
-						$.each(t.reportCountries, function(i,v){
-							if (t.country == v){
-								rep = "yes";
-							}
-						})
-						if (rep == "yes"){
-							$("#" + t.id + "dl-cr").slideDown();
-						}else{
-							$("#" + t.id + "dl-cr").hide();
-						}
 						// check for a deselect
-						if (val.length == 0){
-							$("#" + t.id + " .c-sel").slideUp();
-							t.obj.visibleLayers = [t.countries];
-							t.obj.visibleLayers1 = [-1];
-						}else{
-							t.layerDefs[t.selectedCountry] = "OBJECTID = " + val;
-							t.layerDefs1[t.selectedCountryFill] = "OBJECTID = " + val;
-							t.dynamicLayer.setLayerDefinitions(t.layerDefs);
-							t.dynamicLayer1.setLayerDefinitions(t.layerDefs1);
-							t.obj.visibleLayers = [t.selectedCountry, t.countries];
-							t.obj.visibleLayers1 = [t.selectedCountryFill];
-							$.each(t.atts,function(i,v){
-								if(val == v.OBJECTID){
-									var w = v.emiss_redux_1;
-									if (w != -99){
-										w = w * 100;
-										w = t.clicks.roundTo(w,0);
-										$("#" + t.id + "emiss_redux_1").html(w + "%" + v.eu)
-									}
-									else{
-										$("#" + t.id + "emiss_redux_1").html("N/A")
-									}
-									var w1 = v.ref_yr_1;
-									if (w1 == -99){
-										w1 = "N/A"
-									}
-									$("#" + t.id + "ref_yr_1").html(w1)
-									var x = v.emiss_cut
-									if (x != -99){
-										x = t.clicks.roundTo(x,2);
-										x = t.clicks.commaSeparateNumber(x);
-									}else{
-										x = "N/A"
-									}
-									$("#" + t.id + "emiss_cut").html(x)
-									var y = 0;
-									t.highVals = [];
-									t.maxVals = [];
-									t.lblArray = [];
-									$("#" + t.id + " .p-a").hide();
-									$.each(t.highArray,function(i1,v1){
-										if(v[v1] != -99){
-											t.highVals.push(v[v1]);
-											y = y + Number(v[v1]);
-										}else{
-											t.highVals.push(0);
-										}
-									})
-									$.each(t.maxArray,function(i1,v1){
-										t.lblArray.push(v[v1]);
-										if(v[v1] != -99){
-											if (v[v1] > 40){
-												$("#" + t.id + " .p-a:eq(" + i1 +")").show();
-											}
-											t.maxVals.push(v[v1]);
-										}else{
-											t.maxVals.push(0);
-										}
-									})
-									t.twoDeg = 0;
-									$.each(t.degArray,function(i1,v1){
-										if(v[v1] != -99){
-											t.twoDeg = t.twoDeg + v[v1];
-										}
-									})	
-									if (v.emiss_cut == -99){
-										t.parisBar = 0;	
-									}else{
-										t.parisBar = v.emiss_cut;
-									}
-									t.chartjs.updateChart(t);
-									y = t.clicks.roundTo(y, 4)
-									y = t.clicks.commaSeparateNumber(y)
-									$("#" + t.id + "nscMitPoten").html(y);
-								}
-							})
-							$("#" + t.id + " .c-sel").slideDown();
-							if (t.querySource == "menu"){
-								var c = $("#" + t.id + "selectCountry option:selected").text();
-								var q = new Query();
-								var qt = new QueryTask(t.url + "/" + t.countriesPoint);
-								q.where = "country ='" + c + "'";
-								q.returnGeometry = true;
-								qt.execute(q, function(e){
-									t.map.centerAndZoom(e.features[0].geometry,4)
-								});	
-							}	
-							t.querySource = "menu";
-						}
-						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers)
-						t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1)
+						t.layerDefs[0] = "Group_ = " + val;
+						t.dynamicLayer.setLayerDefinitions(t.layerDefs);
+						t.obj.visibleLayers = [0];
+						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 					});
-				$("#" + t.id + "mpInfo").click(function(){
-					$("#" + t.id + "mpInfoText").slideDown();
-					$("#" + t.id + "mpInfo").slideUp();
-					$("#" + t.id + "hideInfo").slideDown();
-				})
-				$("#" + t.id + "hideInfo").click(function(){
-					$("#" + t.id + "mpInfoText").slideUp();
-					$("#" + t.id + "hideInfo").slideUp();
-					$("#" + t.id + "mpInfo").slideDown();	
-				})	
-				$("#" + t.id + "dl-cr").click(function(){
-					t.country = t.country.replace(/ /g,"%20");
-					window.open("https://nsttnc.blob.core.windows.net/ncs/" + t.country + "%20Report.pdf")
-				});	
 			},
 
 			makeVariables: function(t){

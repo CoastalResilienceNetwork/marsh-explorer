@@ -5,12 +5,12 @@
 // Bring in dojo and javascript api classes as well as varObject.json, js files, and content.html
 define([
 	"dojo/_base/declare", "framework/PluginBase", "dijit/layout/ContentPane", "dojo/dom", "dojo/dom-style", "dojo/dom-geometry", "dojo/text!./obj.json", 
-	"dojo/text!./html/content.html", './js/esriapi', './js/clicks', './js/chartjs', 'dojo/_base/lang'	
+	"dojo/text!./html/content.html", './js/esriapi', './js/clicks', 'dojo/_base/lang'	
 ],
-function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, content, esriapi, clicks, chartjs, lang ) {
+function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, content, esriapi, clicks, lang ) {
 	return declare(PluginBase, {
 		// The height and width are set here when an infographic is defined. When the user click Continue it rebuilds the app window with whatever you put in.
-		toolbarName: "Country Dashboard", showServiceLayersInLegend: false, allowIdentifyWhenActive: false, rendered: false, resizable: false,
+		toolbarName: "Country Dashboard", showServiceLayersInLegend: true, allowIdentifyWhenActive: false, rendered: false, resizable: false,
 		hasCustomPrint: false, size:'custom', width:440, hasHelp:false, 
 		
 		// First function called when the user clicks the pluging icon. 
@@ -19,14 +19,13 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 			declare.safeMixin(this, frameworkParameters);
 			// Define object to access global variables from JSON object. Only add variables to varObject.json that are needed by Save and Share. 
 			this.obj = dojo.eval("[" + obj + "]")[0];	
-			this.url = "http://dev.services.coastalresilience.org:6080/arcgis/rest/services/NCS/NCS_CountryDashboard/MapServer";
+			this.url = "http://dev.services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/LivingShoreline/MapServer";
 			this.layerDefs = [];
 		},
 		// Called after initialize at plugin startup (why the tests for undefined). Also called after deactivate when user closes app by clicking X. 
 		hibernate: function () {
 			if (this.appDiv != undefined){
 				this.dynamicLayer.setVisibleLayers([-1])
-				this.dynamicLayer1.setVisibleLayers([-1])
 			}
 			this.open = "no";
 		},
@@ -38,7 +37,6 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 				$(this.printButton).hide();
 			}else{
 				this.dynamicLayer.setVisibleLayers(this.obj.visibleLayers);
-				this.dynamicLayer1.setVisibleLayers(this.obj.visibleLayers1);
 				$('#' + this.id).parent().parent().css('display', 'flex');
 			}
 			this.open = "yes";
@@ -77,7 +75,6 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 			// BRING IN OTHER JS FILES
 			this.esriapi = new esriapi();
 			this.clicks = new clicks();
-			this.chartjs = new chartjs();
 			// ADD HTML TO APP
 			// Define Content Pane as HTML parent		
 			this.appDiv = new ContentPane({style:'padding:8px; flex:1; display:flex; flex-direction:column; height:100%;'});
@@ -97,7 +94,6 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 			this.clicks.eventListeners(this);
 			// Create ESRI objects and event listeners	
 			this.esriapi.esriApiFunctions(this);
-			this.chartjs.createChart(this);
 			this.rendered = true;	
 		}
 	});
