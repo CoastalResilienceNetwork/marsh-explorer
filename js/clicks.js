@@ -1,36 +1,41 @@
 define([
-	"dojo/_base/declare", "esri/tasks/query", "esri/tasks/QueryTask"
+	"dojo/_base/declare", "esri/tasks/query", "esri/tasks/QueryTask", "esri/graphicsUtils"
 ],
-function ( declare, Query, QueryTask ) {
+function ( declare, Query, QueryTask, graphicsUtils ) {
         "use strict";
 
         return declare(null, {
 			eventListeners: function(t){
 				t.county = "";
-				$("#" + t.id + "selectCounty").chosen({allow_single_deselect:false, width:"252px"})
+				$("#" + t.id + "selectCounty").chosen({allow_single_deselect:false, width:"300px"})
 					.change(function(c){
 						var val = c.target.value;
-						// check for a deselect
-						t.layerDefs[0] = "Group_ = " + val;
+						// set layer definitions
+						if (val == 0){
+							t.layerDefs[0] = "OBJECTID > -1";	
+						}else{
+							t.layerDefs[0] = "Group_ = '" + val + "'";
+						}
 						t.dynamicLayer.setLayerDefinitions(t.layerDefs);
 						t.obj.visibleLayers = [0];
 						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+						// query for extent
+						var q = new Query();
+						var qt = new QueryTask(t.url + "/1" );
+						q.where = t.layerDefs[0];
+						q.returnGeometry = true;
+						qt.execute(q, function(e){
+							var extent = graphicsUtils.graphicsExtent(e.features)
+							t.map.setExtent(extent);
+						})
+						// show next div
+						$("#" + t.id + "view-results-wrap").slideDown();
 					});
 			},
 
 			makeVariables: function(t){
-				t.querySource = "menu";
-				t.selectedCountry = 0;
-				t.selectedCountryFill = 1;
-				t.countries = 2;
-				t.countriesAfterFirstSel = 3;
-				t.countriesPoint = 4;
 				t.layerDefs = [];
-				t.layerDefs1 = [];
 				t.atts = [];
-				t.highArray = ["defor_high", "wfuel_high", "mangrove_high","peat_loss_high","legumes_high","optint_high","rice_high","natfor_high","peat_res_high","refor_high"];
-				t.maxArray = ["refor_max", "defor_max", "natfor_max", "peat_res_max", "peat_loss_max", "wfuel_max", "mangrove_max", "rice_max", "optint_max", "legumes_max"];
-				t.degArray = ["mangrove_2deg","peat_loss_2deg","legumes_2deg","optint_2deg","rice_2deg","natfor_2deg","peat_res_2deg","refor_2deg"];
 			},
 			commaSeparateNumber: function(val){
 				while (/(\d+)(\d{3})/.test(val.toString())){

@@ -9,7 +9,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
         return declare(null, {
 			esriApiFunctions: function(t){	
 				// Add dynamic map service
-				t.dynamicLayer = new ArcGISDynamicMapServiceLayer(t.url);
+				t.dynamicLayer = new ArcGISDynamicMapServiceLayer(t.url, {opacity:0.7});
 				t.map.addLayer(t.dynamicLayer);
 				if (t.obj.visibleLayers.length > 0){	
 					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
@@ -17,7 +17,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				t.dynamicLayer.on("load", function () { 			
 					t.layersArray = t.dynamicLayer.layerInfos;
 					if (t.obj.stateSet == "no"){
-						t.map.setZoom(2);
+						
 					}
 					// Save and Share Handler					
 					if (t.obj.stateSet == "yes"){
@@ -30,13 +30,12 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				// get data table
 				var q = new Query();
 				var qt = new QueryTask(t.url + "/0" );
-				q.where = "OBJECTID > 0";
+				q.where = "OBJECTID > -1";
 				q.returnGeometry = false;
 				q.outFields = ["*"];
 				var c = [];
 				qt.execute(q, function(e){
 					$.each(e.features, function(i,v){
-						t.atts.push(v.attributes)
 						c.push(v.attributes.Group_)
 					})
 					var allCounties = c.sort();
@@ -46,35 +45,37 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 					    	counties.push(el);	
 					    } 
 					});
+					$('#' + t.id + 'selectCounty').append("<option value='0'>Coast of New Jersey (Entire Project)</option")
 					$.each(counties,function(i,v){
-						var a = v.split(",")[1];
-						var b = v.split(",")[0];
-						$('#' + t.id + 'selectCounty').append("<option value='" + a + "'>"+ b +"</option")
+						$('#' + t.id + 'selectCounty').append("<option value='" + v + "'>"+ v +"</option")
 					})	
 					$('#' + t.id + 'selectCounty').trigger("chosen:updated");			
 				});
 				// handle map clicks
-				// t.map.setMapCursor("pointer")
-				// t.map.on('click',function(c){
-				// 	if (t.open == "yes"){
-				// 		t.querySource = "map";
-				// 		var pnt = c.mapPoint;
-				// 		var q1 = new Query();
-				// 		var qt1 = new QueryTask(t.url + "/" + t.countries);
-				// 		q1.geometry = pnt;
-				// 		q1.outFields = ["OBJECTID"];
-				// 		qt1.execute(q1, function(e){
-				// 			if (e.features.length > 0){
-				// 				var obid = e.features[0].attributes.OBJECTID;
-				// 				$("#" + t.id + "selectCounty").val(obid).trigger("chosen:updated").trigger("change");						
-				// 			}else{
-				// 				t.obj.visibleLayers = [t.countries];
-				// 				t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
-				// 				$("#" + t.id + "selectCounty").val("").trigger("chosen:updated").trigger("change");	
-				// 			}	
-				// 		})	
-				// 	}
-				// })
+				t.map.setMapCursor("pointer")
+				var sfs = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255,0,0]), 2),new Color([255,255,255,0]));
+				t.map.on('click',function(c){
+					t.map.setMapCursor("pointer")
+					if (t.open == "yes"){
+						t.map.graphics.clear();
+						var pnt = c.mapPoint;
+						var q1 = new Query();
+						var qt1 = new QueryTask(t.url + "/0");
+						q1.geometry = pnt;
+						q1.outFields = ["*"];
+						q1.returnGeometry = true;
+						qt1.execute(q1, function(e){
+							if (e.features.length > 0){
+								t.atts = e.features[0].attributes;
+								console.log(t.atts.Disp_Desc);
+								var geo = e.features[0].geometry;
+								t.map.graphics.add(new Graphic(geo,sfs))													
+							}else{
+								
+							}	
+						})	
+					}
+				})
 			}				
 		});
     }
