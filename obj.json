@@ -1,5 +1,9 @@
 {
 	"visibleLayers": [],
 	"extent": "",
+	"DL": true,
+	"DT": true,
+	"ER": true,
+	"UV": true,
 	"stateSet": "no"
 }

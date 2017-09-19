@@ -16,6 +16,12 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				}
 				t.dynamicLayer.on("load", function () { 			
 					t.layersArray = t.dynamicLayer.layerInfos;
+					// set checkboxes
+					$.each(t.types, function(i,v){
+						if(t.obj[v]){
+							$("#" + t.id + v).prop('checked', true);	
+						}
+					})
 					if (t.obj.stateSet == "no"){
 						
 					}
@@ -29,7 +35,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				});		
 				// get data table
 				var q = new Query();
-				var qt = new QueryTask(t.url + "/0" );
+				var qt = new QueryTask(t.url + "/" + t.lyrs.DL_DT_ER_UV );
 				q.where = "OBJECTID > -1";
 				q.returnGeometry = false;
 				q.outFields = ["*"];
@@ -60,14 +66,13 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 						t.map.graphics.clear();
 						var pnt = c.mapPoint;
 						var q1 = new Query();
-						var qt1 = new QueryTask(t.url + "/0");
+						var qt1 = new QueryTask(t.url + "/" + t.lyrs.DL_DT_ER_UV);
 						q1.geometry = pnt;
 						q1.outFields = ["*"];
 						q1.returnGeometry = true;
 						qt1.execute(q1, function(e){
 							if (e.features.length > 0){
 								t.atts = e.features[0].attributes;
-								console.log(t.atts.Disp_Desc);
 								var geo = e.features[0].geometry;
 								t.map.graphics.add(new Graphic(geo,sfs))													
 							}else{

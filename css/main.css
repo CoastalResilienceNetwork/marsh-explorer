@@ -1,3 +1,9 @@
 .hide{
 	display:none;
 }
+.vr-cb-flex{
+	display:flex;
+}
+.vr-cb-row{
+	flex:1;
+}

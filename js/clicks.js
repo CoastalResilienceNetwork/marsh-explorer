@@ -9,33 +9,66 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				t.county = "";
 				$("#" + t.id + "selectCounty").chosen({allow_single_deselect:false, width:"300px"})
 					.change(function(c){
-						var val = c.target.value;
-						// set layer definitions
-						if (val == 0){
-							t.layerDefs[0] = "OBJECTID > -1";	
-						}else{
-							t.layerDefs[0] = "Group_ = '" + val + "'";
-						}
-						t.dynamicLayer.setLayerDefinitions(t.layerDefs);
-						t.obj.visibleLayers = [0];
-						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
-						// query for extent
-						var q = new Query();
-						var qt = new QueryTask(t.url + "/1" );
-						q.where = t.layerDefs[0];
-						q.returnGeometry = true;
-						qt.execute(q, function(e){
-							var extent = graphicsUtils.graphicsExtent(e.features)
-							t.map.setExtent(extent);
-						})
+						t.county = c.target.value;
+						var lyr = t.clicks.findLayer(t);
+						if (lyr.length > 0){
+							// query for extent
+							var q = new Query();
+							var qt = new QueryTask(t.url + "/" + t.lyrs.bounds );
+							q.where = t.layerDefs[t.lyrs[lyr]];
+							q.returnGeometry = true;
+							qt.execute(q, function(e){
+								var extent = graphicsUtils.graphicsExtent(e.features)
+								t.map.setExtent(extent);
+							})
+						}	
 						// show next div
 						$("#" + t.id + "view-results-wrap").slideDown();
 					});
+				// view results checkbox clicks
+				$(".vr-cb-flex input").click(function(c){
+					t.obj[c.currentTarget.value] = c.currentTarget.checked;
+					t.clicks.findLayer(t);
+				})
+				 	
 			},
-
+			findLayer: function(t){
+				// find requested lyr
+				var lyr = ""
+				$.each(t.types, function(i,v){
+					if(t.obj[v]){
+						if (lyr.length == 0){
+							lyr = v;
+						}else{
+							lyr = lyr + "_" + v;
+						}
+					}
+				})
+				if (lyr.length > 0){
+					// set layer definitions
+					if (t.county == 0){
+						t.layerDefs[t.lyrs[lyr]] = "OBJECTID > -1";	
+					}else{
+						t.layerDefs[t.lyrs[lyr]] = "Group_ = '" + t.county + "'";
+					}
+					t.dynamicLayer.setLayerDefinitions(t.layerDefs);
+					//set layer vis
+					t.obj.visibleLayers = [t.lyrs[lyr]];
+					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+				}else{
+					t.obj.visibleLayers = [-1];
+					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+				}
+				return lyr;
+			},
 			makeVariables: function(t){
 				t.layerDefs = [];
 				t.atts = [];
+				t.lyrs = {
+					bounds:0, DL_DT_ER_UV:1, DL:2, DT:3, ER:4, UV:5, DL_DT:6, DL_ER:7, DL_UV:8, DT_ER:9, DT_UV:10, 
+					ER_UV:11, DL_DT_ER:12, DL_ER_UV:13, DT_ER_UV:14, DL_DT_UV:15 	
+				}
+				t.types = ["DL","DT","ER","UV"]
 			},
 			commaSeparateNumber: function(val){
 				while (/(\d+)(\d{3})/.test(val.toString())){
