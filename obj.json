@@ -1,9 +1,10 @@
 {
 	"visibleLayers": [],
 	"extent": "",
+	"ranking": "DL_DT_ER_UV",
 	"DL": true,
-	"DT": true,
-	"ER": true,
-	"UV": true,
+	"DT": false,
+	"ER": false,
+	"UV": false,
 	"stateSet": "no"
 }

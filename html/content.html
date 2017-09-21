@@ -3,7 +3,7 @@ Dijit ContentPane to hold all the elements. The ContentPane is assigned a dynami
 takes the ContentPane id and prepends it to every element with a declared id in this HTML before the elements are created.
 The unique ContentPane id makes all the element ids unique and prevents duplicate id errors across other apps.-->
 
-<section id="top-wrap">
+<section id="top-wrap" class="me-top-wrap">
 	<h3>Select area of interest</h3>
 	<div class="chosen-wrap" style="margin-bottom:10px; margin-left:3px;">
 		<select data-placeholder="Select a County" id="selectCounty" class="chosen">
@@ -11,7 +11,13 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 		</select>
 	</div>
 	<div id="view-results-wrap" class="hide">
-		<h3>View Results Ranked By</h3>
+		<h3>View Results By</h3>
+		<div class="vr-rb-wrap toggle-btn">
+			<input type="radio" id="vr-rb1" name="vr-rb" value="DL_DT_ER_UV">
+			<label class="form-component" for="vr-rb1">Combined Ranking</label>
+			<input type="radio" id="vr-rb2" name="vr-rb" value="select-rankings">
+			<label class="form-component" for="vr-rb2">Selected Rankings</label>
+		</div>	
 		<div class="vr-cb-flex">
 			<div class="vr-cb-row">
 				<label class="form-component" for="DL">
@@ -37,6 +43,26 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 					<span class="form-text">Unvegetated</span>
 				</label>
 			</div>	
+		</div>	
+		<h4 id="click-selected">Click individual rankings for more info</h4>
+		<div id="me-sh-atts" class="hide">
+			<div id="ind-att-wrap" class="ind-att-wrap">
+				<div id="close-atts" class="me-close-atts"><img src="plugins/marsh-explorer/images/infoClose.png" alt="close attribute window"></div>
+				<div class="me-att-row"> <div>Dredged Lagoon (Acres):<span class="DL_Acres"></span></div> </div>
+				<div class="me-att-row"> <div>Linear Ditching (Miles):<span class="DT_Miles"></span></div>	</div>
+				<div class="me-att-row"> <div>Ditching per Wetland Acre:<span class="DT_per_Acr"></span></div>	</div>
+				<div class="me-att-row"> <div>Edge Erosion (Acres):<span class="ER_Acre"></span></div> </div>
+				<div class="me-att-row"> <div>Erosion per Wetland Acre:<span class="ER_perAcr"></span></div> </div>
+				<div class="me-att-row"> <div>NDVI Vegetated Acres:<span class="Veg_Acre"></span></div> </div>
+				<div class="me-att-row"> <div>NDVI Unvegetated Acres:<span class="UV_Acre"></span></div> </div>
+				<div class="me-att-row"> <div>Unvegetated Wetland (%):<span class="UV_Percent"></span></div>	</div>
+				<div class="me-att-row"> <div>Unvegetated-Vegetated Ratio:<span class="UVVR"></span></div> </div>
+				<div class="me-att-row"> <div>NDVI Wetland (Acres):<span class="Wtld_Acre"></span></div> </div>
+				<div class="me-att-row"> <div>LULC Wetland (Acre):<span class="LULC_Arce"></span></div> </div>
+				<div class="me-att-row"> <div>Marsh remaining from TLC (%):<span class="Loss_Tidel"></span></div> </div>
+				<div class="me-att-row"> <div>Marsh Lost since TLC (%):<span class="Decrease_T"></span></div> </div>
+				<div class="me-att-row"> <div>Tidelands Claim Loss Rank:<span class="TLC_Loss_R"></span></div>	</div>
+			</div>
 		</div>	
 	</div>
 </section>

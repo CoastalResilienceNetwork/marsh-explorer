@@ -10,56 +10,85 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				$("#" + t.id + "selectCounty").chosen({allow_single_deselect:false, width:"300px"})
 					.change(function(c){
 						t.county = c.target.value;
-						var lyr = t.clicks.findLayer(t);
-						if (lyr.length > 0){
-							// query for extent
-							var q = new Query();
-							var qt = new QueryTask(t.url + "/" + t.lyrs.bounds );
-							q.where = t.layerDefs[t.lyrs[lyr]];
-							q.returnGeometry = true;
-							qt.execute(q, function(e){
-								var extent = graphicsUtils.graphicsExtent(e.features)
-								t.map.setExtent(extent);
-							})
-						}	
+						// query to change extent to selected county
+						var q = new Query();
+						var qt = new QueryTask(t.url + "/" + t.lyrs.bounds );
+						q.where = "Group_ = '" + t.county + "'";
+						q.returnGeometry = true;
+						qt.execute(q, function(e){
+							var extent = graphicsUtils.graphicsExtent(e.features)
+							t.map.setExtent(extent);
+							// trigger radio button click
+							$(".vr-rb-wrap input[value='" + t.obj.ranking +"']").each(function(i,v){
+								$(v).prop('checked', false);
+								$(v).trigger("click");
+							})	
+						})
 						// show next div
 						$("#" + t.id + "view-results-wrap").slideDown();
 					});
-				// view results checkbox clicks
+				// view results radio buttons
+				$(".vr-rb-wrap input").change(function(c){
+					var val = c.currentTarget.value
+					t.obj.ranking = val;
+					// clicked on combined rankings
+					if (val == "DL_DT_ER_UV"){
+						// disabled checkboxes in lower sections
+						$(".vr-cb-flex input").prop("disabled", true);
+						// set layer definitions
+						var w = "Group_ = '" + t.county + "'";
+						if (t.county == "Coast of New Jersey (Entire Project)"){
+							w = "OBJECTID > -1";
+						}
+						t.layerDefs[t.lyrs[val]] = w;
+						t.dynamicLayer.setLayerDefinitions(t.layerDefs);
+						//set layer vis
+						t.obj.visibleLayers = [t.lyrs[val]];
+						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+					}
+					// clicked on select rankings
+					if (c.currentTarget.value == "select-rankings"){
+						// enable checkboxes
+						$(".vr-cb-flex input").prop("disabled", false);
+						// set checkboxes checked state
+						$.each(t.types, function(i,v){
+							if(t.obj[v]){
+								$("#" + t.id + v).prop('checked', true);	
+							}
+						})
+						t.clicks.showRankingsLayer(t);
+					}
+				})
+				// selected rankings checkbox clicks
 				$(".vr-cb-flex input").click(function(c){
+					// update the object that tracks checkbox state
 					t.obj[c.currentTarget.value] = c.currentTarget.checked;
-					t.clicks.findLayer(t);
+					// update t.lyr object by looking for properties set to true
+					t.lyr = "";
+					$.each(t.types, function(i,v){
+						if(t.obj[v]){
+							if (t.lyr.length == 0){
+								t.lyr = v;
+							}else{
+								t.lyr = t.lyr + "_" + v;
+							}
+						}
+					})	
+					t.clicks.showRankingsLayer(t);
 				})
 				 	
 			},
-			findLayer: function(t){
-				// find requested lyr
-				var lyr = ""
-				$.each(t.types, function(i,v){
-					if(t.obj[v]){
-						if (lyr.length == 0){
-							lyr = v;
-						}else{
-							lyr = lyr + "_" + v;
-						}
-					}
-				})
-				if (lyr.length > 0){
-					// set layer definitions
-					if (t.county == 0){
-						t.layerDefs[t.lyrs[lyr]] = "OBJECTID > -1";	
-					}else{
-						t.layerDefs[t.lyrs[lyr]] = "Group_ = '" + t.county + "'";
-					}
-					t.dynamicLayer.setLayerDefinitions(t.layerDefs);
-					//set layer vis
-					t.obj.visibleLayers = [t.lyrs[lyr]];
-					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
-				}else{
-					t.obj.visibleLayers = [-1];
-					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+			showRankingsLayer: function(t){
+				// set layer definitions
+				var w = "Group_ = '" + t.county + "'";
+				if (t.county == "Coast of New Jersey (Entire Project)"){
+					w = "OBJECTID > -1";
 				}
-				return lyr;
+				t.layerDefs[t.lyrs[t.lyr]] = w;
+				t.dynamicLayer.setLayerDefinitions(t.layerDefs);
+				//set layer vis
+				t.obj.visibleLayers = [t.lyrs[t.lyr]];
+				t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 			},
 			makeVariables: function(t){
 				t.layerDefs = [];

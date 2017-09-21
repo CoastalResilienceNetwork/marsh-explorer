@@ -16,12 +16,16 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				}
 				t.dynamicLayer.on("load", function () { 			
 					t.layersArray = t.dynamicLayer.layerInfos;
-					// set checkboxes
+					t.lyr = ""
 					$.each(t.types, function(i,v){
 						if(t.obj[v]){
-							$("#" + t.id + v).prop('checked', true);	
+							if (t.lyr.length == 0){
+								t.lyr = v;
+							}else{
+								t.lyr = t.lyr + "_" + v;
+							}
 						}
-					})
+					})					
 					if (t.obj.stateSet == "no"){
 						
 					}
@@ -33,28 +37,17 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 						t.obj.stateSet = "no";
 					}	
 				});		
-				// get data table
+				// query to populate chosen menu
 				var q = new Query();
-				var qt = new QueryTask(t.url + "/" + t.lyrs.DL_DT_ER_UV );
+				var qt = new QueryTask(t.url + "/" + t.lyrs.bounds );
 				q.where = "OBJECTID > -1";
 				q.returnGeometry = false;
 				q.outFields = ["*"];
 				var c = [];
 				qt.execute(q, function(e){
 					$.each(e.features, function(i,v){
-						c.push(v.attributes.Group_)
+						$('#' + t.id + 'selectCounty').append("<option value='" + v.attributes.Group_ + "'>"+ v.attributes.Group_ +"</option")
 					})
-					var allCounties = c.sort();
-					var counties = [];
-					$.each(allCounties, function(i, el){
-					    if($.inArray(el, counties) === -1){
-					    	counties.push(el);	
-					    } 
-					});
-					$('#' + t.id + 'selectCounty').append("<option value='0'>Coast of New Jersey (Entire Project)</option")
-					$.each(counties,function(i,v){
-						$('#' + t.id + 'selectCounty').append("<option value='" + v + "'>"+ v +"</option")
-					})	
 					$('#' + t.id + 'selectCounty').trigger("chosen:updated");			
 				});
 				// handle map clicks
@@ -75,13 +68,27 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 								t.atts = e.features[0].attributes;
 								var geo = e.features[0].geometry;
 								t.map.graphics.add(new Graphic(geo,sfs))													
+								$("#" + t.id + "ind-att-wrap span").each(function(i,v){
+									var n = t.clicks.roundTo(t.atts[$(v).attr("class")], 1)
+									$(v).html(n);
+								})
+								$("#" + t.id + "click-selected").html("Selected Area Attributes");	
+								$("#" + t.id + "me-sh-atts").slideDown();	
 							}else{
-								
-							}	
+								t.esriapi.clearAtts(t);
+							}
 						})	
 					}
 				})
-			}				
+				$("#" + t.id + "close-atts").click(function(){
+					t.esriapi.clearAtts(t);
+				})
+			},
+			clearAtts: function(t){
+				t.map.graphics.clear();
+				$("#" + t.id + "click-selected").html("Click individual rankings for more info");
+				$("#" + t.id + "me-sh-atts").slideUp();
+			} 				
 		});
     }
 );
