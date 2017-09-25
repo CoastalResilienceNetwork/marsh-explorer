@@ -22,6 +22,9 @@
 .me-close-atts{
 	position:absolute; top:3px; right:25px; cursor:pointer;
 } 
+.sup-data-wrap{
+	border-top:1px solid #cdd5d5; margin-top:20px;
+}
 .sup-data-cb-wrap{
 	display:flex; flex-direction:column;
 }
