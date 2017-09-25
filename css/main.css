@@ -1,4 +1,4 @@
-.hide{
+.hide, .couny-selected-wrap{
 	display:none;
 }
 .vr-cb-flex{
@@ -22,3 +22,6 @@
 .me-close-atts{
 	position:absolute; top:3px; right:25px; cursor:pointer;
 } 
+.sup-data-cb-wrap{
+	display:flex; flex-direction:column;
+}

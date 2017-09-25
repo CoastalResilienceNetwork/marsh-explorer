@@ -25,10 +25,10 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 							})	
 						})
 						// show next div
-						$("#" + t.id + "view-results-wrap").slideDown();
+						$("#" + t.id + " .couny-selected-wrap").slideDown();
 					});
 				// view results radio buttons
-				$(".vr-rb-wrap input").change(function(c){
+				$("#" + t.id + " .vr-rb-wrap input").change(function(c){
 					var val = c.currentTarget.value
 					t.obj.ranking = val;
 					// clicked on combined rankings
@@ -60,7 +60,7 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 					}
 				})
 				// selected rankings checkbox clicks
-				$(".vr-cb-flex input").click(function(c){
+				$("#" + t.id + " .vr-cb-flex input").click(function(c){
 					// update the object that tracks checkbox state
 					t.obj[c.currentTarget.value] = c.currentTarget.checked;
 					// update t.lyr object by looking for properties set to true
@@ -76,7 +76,19 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 					})	
 					t.clicks.showRankingsLayer(t);
 				})
-				 	
+				// click on supporting data
+				$("#" + t.id + " .sup-data-cb-wrap input").click(function(c){
+					if (c.currentTarget.checked){
+						t.obj.visibleLayers1.push(c.currentTarget.value);
+						t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
+					}else{
+						var ind = t.obj.visibleLayers1.indexOf(c.currentTarget.value)
+						if (ind > -1){
+							t.obj.visibleLayers1.splice(ind, 1);
+							t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
+						}
+					}
+				});				 	
 			},
 			showRankingsLayer: function(t){
 				// set layer definitions
@@ -95,7 +107,7 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				t.atts = [];
 				t.lyrs = {
 					bounds:0, DL_DT_ER_UV:1, DL:2, DT:3, ER:4, UV:5, DL_DT:6, DL_ER:7, DL_UV:8, DT_ER:9, DT_UV:10, 
-					ER_UV:11, DL_DT_ER:12, DL_ER_UV:13, DT_ER_UV:14, DL_DT_UV:15 	
+					ER_UV:11, DL_DT_ER:12, DL_ER_UV:13, DT_ER_UV:14, DL_DT_UV:15	
 				}
 				t.types = ["DL","DT","ER","UV"]
 			},

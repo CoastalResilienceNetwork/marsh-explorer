@@ -10,7 +10,12 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 			esriApiFunctions: function(t){	
 				// Add dynamic map service
 				t.dynamicLayer = new ArcGISDynamicMapServiceLayer(t.url, {opacity:0.7});
+				t.dynamicLayer1 = new ArcGISDynamicMapServiceLayer(t.url, {opacity:0.7});
 				t.map.addLayer(t.dynamicLayer);
+				t.map.addLayer(t.dynamicLayer1);
+				if (t.obj.visibleLayers1.length > 0){	
+					t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
+				}
 				if (t.obj.visibleLayers.length > 0){	
 					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 				}
@@ -52,7 +57,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				});
 				// handle map clicks
 				t.map.setMapCursor("pointer")
-				var sfs = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255,0,0]), 2),new Color([255,255,255,0]));
+				var sfs = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0,0,255]), 2),new Color([255,255,255,0]));
 				t.map.on('click',function(c){
 					t.map.setMapCursor("pointer")
 					if (t.open == "yes"){
