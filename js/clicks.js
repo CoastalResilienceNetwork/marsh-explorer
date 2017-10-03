@@ -88,7 +88,7 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 							t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
 						}
 					}
-				});				 	
+				});			 	
 			},
 			showRankingsLayer: function(t){
 				// set layer definitions
