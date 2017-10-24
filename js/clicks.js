@@ -43,7 +43,7 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 						t.layerDefs[t.lyrs[val]] = w;
 						t.dynamicLayer.setLayerDefinitions(t.layerDefs);
 						//set layer vis
-						t.obj.visibleLayers = [t.lyrs[val]];
+						t.obj.visibleLayers = [0,t.lyrs[val]];
 						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 					}
 					// clicked on select rankings
@@ -102,7 +102,7 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				t.layerDefs[t.lyrs[t.lyr]] = w;
 				t.dynamicLayer.setLayerDefinitions(t.layerDefs);
 				//set layer vis
-				t.obj.visibleLayers = [t.lyrs[t.lyr]];
+				t.obj.visibleLayers = [0,t.lyrs[t.lyr]];
 				t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 			},
 			makeVariables: function(t){
@@ -114,12 +114,6 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				}
 				t.types = ["DL","DT","ER","UV"]
 			},
-			commaSeparateNumber: function(val){
-				while (/(\d+)(\d{3})/.test(val.toString())){
-					val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
-				}
-				return val;
-			},
 			roundTo: function(n, digits) {
 				if (digits === undefined) {
 			    	digits = 0;
@@ -128,18 +122,6 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				n = parseFloat((n * multiplicator).toFixed(11));
 				var test =(Math.round(n) / multiplicator);
 				return +(test.toFixed(2));
-			},
-			abbreviateNumber: function(num) {
-			    if (num >= 1000000000) {
-			        return (num / 1000000000).toFixed(1).replace(/\.0$/, '') + 'B';
-			     }
-			     if (num >= 1000000) {
-			        return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
-			     }
-			     if (num >= 1000) {
-			        return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
-			     }
-			     return num;
 			}
         });
     }
