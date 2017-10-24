@@ -109,7 +109,7 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				t.layerDefs = [];
 				t.atts = [];
 				t.lyrs = {
-					bounds:0, DL_DT_ER_UV:1, DL:2, DT:3, ER:4, UV:5, DL_DT:6, DL_ER:7, DL_UV:8, DT_ER:9, DT_UV:10, 
+					bounds:20, DL_DT_ER_UV:1, DL:2, DT:3, ER:4, UV:5, DL_DT:6, DL_ER:7, DL_UV:8, DT_ER:9, DT_UV:10, 
 					ER_UV:11, DL_DT_ER:12, DL_ER_UV:13, DT_ER_UV:14, DL_DT_UV:15	
 				}
 				t.types = ["DL","DT","ER","UV"]
