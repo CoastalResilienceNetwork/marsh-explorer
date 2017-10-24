@@ -88,7 +88,10 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 							t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
 						}
 					}
-				});			 	
+				});	
+				$("#" + t.id + "methodsBtn").click(function(c){
+					window.open("plugins/marsh-explorer/MarshExplorerMethods.pdf")
+				})		 	
 			},
 			showRankingsLayer: function(t){
 				// set layer definitions
