@@ -62,26 +62,57 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 		<div class="sup-data-wrap">
 			<h3>View Supporting Data</h3>
 			<div class="sup-data-cb-wrap">
-				<label class="form-component" for="UDL">
+				<label class="form-component sup-data-narrow" for="UDL">
 					<input type="checkbox" id="UDL" name="sd" value="16">
 					<div class="check"></div>
 					<span class="form-text">Dredged Lagoons</span>
 				</label>
-				<label class="form-component" for="CDL">
+				<label class="form-component sup-data-narrow" for="CDL">
 					<input type="checkbox" id="CDL" name="sd" value="17">
 					<div class="check"></div>
 					<span class="form-text">Linear Ditching</span>
 				</label>
-				<label class="form-component" for="MEL">
+				<label class="form-component sup-data-narrow" for="MEL">
 					<input type="checkbox" id="MEL" name="sd" value="18">
 					<div class="check"></div>
 					<span class="form-text">Marsh Edge Erosion</span>
 				</label>
-				<label class="form-component" for="UVL">
+				<label class="form-component sup-data-narrow" for="UVL">
 					<input type="checkbox" id="UVL" name="sd" value="19">
 					<div class="check"></div>
 					<span class="form-text">Unvegetated Marsh</span>
 				</label>
+				<label class="form-component sup-data-wide" for="FNC">
+					<input type="checkbox" id="FNC" name="sd" value="22">
+					<div class="check"></div>
+					<span class="form-text">Federal Navigation Channels</span>
+				</label>
+				<label class="form-component sup-data-wide" for="SCP">
+					<input type="checkbox" id="SCP" name="sd" value="21">
+					<div class="check"></div>
+					<span class="form-text">Sediment Cores</span>
+				</label>
+				<div class="me-scClicks">
+					<div id="scLabel" class="scLabel">Click points for more info</div>
+					<div class="sc-att-wrap">
+						<div class="sc-flex-atts">
+							<div>Sand: <span id="-Sand"></span></div>
+							<div>Silt: <span id="-Silt"></span></div>
+							<div>Clay: <span id="-Clay"></span></div>
+						</div>
+					</div>	
+				</div>
+				<label class="form-component sup-data-wide" for="SDR">
+					<input type="checkbox" id="SDR" name="sd" value="23">
+					<div class="check"></div>
+					<span class="form-text">Sediment Distribution</span>
+				</label>
+				<div class="me-sdClicks">
+					<div id="sdLabel" class="scLabel">Click raster for more info</div>
+					<div class="sd-att-wrap">
+						<div>Sand: <span id="PixelValue"></span></div>
+					</div>	
+				</div>	
 			</div>
 			<div class="button-wrap">
 				<button class="button button-primary" id="methodsBtn">Methods</button>

@@ -26,7 +26,28 @@
 	border-top:1px solid #cdd5d5; margin-top:20px;
 }
 .sup-data-cb-wrap{
-	display:flex; flex-direction:column;
+	display:flex; flex-direction:row; flex-wrap:wrap;
+}
+.sup-data-narrow{
+	min-width:150px;
+}
+.sup-data-wide{
+	min-width:300px;
+}
+.me-scClicks, .me-sdClicks{
+	display:none; margin:-6px 0 3px 30px;
+}
+.sc-att-wrap, .sd-att-wrap{
+	display:none;
+}
+.sc-flex-atts{
+ 	display:flex; flex-wrap:wrap
+}
+.sc-flex-atts div, .sd-att-wrap div{
+	border:1pt solid #cdd5d5; padding:5px; box-shadow:0 1px 1px rgba(16,22,26,.2);
+}
+.sc-att-wrap span, .sd-att-wrap span{
+	color:#2F6384; font-weight:bold;	
 }
 .button-wrap{
 	text-align:center; margin-top:10px;

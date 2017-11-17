@@ -78,14 +78,32 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				})
 				// click on supporting data
 				$("#" + t.id + " .sup-data-cb-wrap input").click(function(c){
+					var iid = c.currentTarget.id;
 					if (c.currentTarget.checked){
 						t.obj.visibleLayers1.push(c.currentTarget.value);
 						t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
+						if (iid == t.id + "SCP"){
+							$("#" + t.id + " .me-scClicks").slideDown();
+						}
+						if (iid == t.id + "SDR"){
+							t.obj.SedimentDistribution = "on";
+							$("#" + t.id + " .me-sdClicks").slideDown();
+						}
 					}else{
 						var ind = t.obj.visibleLayers1.indexOf(c.currentTarget.value)
 						if (ind > -1){
 							t.obj.visibleLayers1.splice(ind, 1);
 							t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
+						}
+						if (iid == t.id + "SCP"){
+							$("#" + t.id + " .me-scClicks").slideUp();
+							if ($(".sc-att-wrap").is(":visible")){
+								t.map.graphics.clear();
+							}
+						}
+						if (iid == t.id + "SDR"){
+							t.obj.SedimentDistribution = "off";
+							$("#" + t.id + " .me-sdClicks").slideUp();
 						}
 					}
 				});	
