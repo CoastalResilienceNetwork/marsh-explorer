@@ -15,12 +15,9 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				t.dynamicLayer1 = new ArcGISDynamicMapServiceLayer(t.url, {opacity:0.7});
 				t.map.addLayer(t.dynamicLayer);
 				t.map.addLayer(t.dynamicLayer1);
-				if (t.obj.visibleLayers1.length > 0){	
-					t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
-				}
-				if (t.obj.visibleLayers.length > 0){	
-					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
-				}
+				t.dynamicLayer1.setVisibleLayers(t.obj.visibleLayers1);
+				t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+			
 				t.dynamicLayer.on("load", function () { 			
 					t.layersArray = t.dynamicLayer.layerInfos;
 					t.lyr = ""

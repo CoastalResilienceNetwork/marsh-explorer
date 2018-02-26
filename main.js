@@ -25,7 +25,9 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 		// Called after initialize at plugin startup (why the tests for undefined). Also called after deactivate when user closes app by clicking X. 
 		hibernate: function () {
 			if (this.appDiv != undefined){
-				this.dynamicLayer.setVisibleLayers([-1])
+				this.esriapi.clearAtts(this);
+				this.obj.visibleLayers = [-1];
+				this.dynamicLayer.setVisibleLayers(this.obj.visibleLayers);
 			}
 			this.open = "no";
 		},
@@ -37,7 +39,6 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 				$(this.printButton).hide();
 			}else{
 				this.dynamicLayer.setVisibleLayers(this.obj.visibleLayers);
-				$('#' + this.id).parent().parent().css('display', 'flex');
 			}
 			this.open = "yes";
 		},
